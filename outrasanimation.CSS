@@ -1,0 +1,21 @@
+#coisadesom.animation {
+    animation: tutstuts 0.5s infinite
+}
+
+@keyframes tutstuts {
+    0% {
+        height: 50px;
+        transform: translateY(0px);
+        transform: translateX(0px);
+    }
+    50% {
+        height: 55px;
+        transform: translateY(-5px);
+        transform: translateX(-5px);
+    }
+    100% {
+        height: 50px;
+        transform: translateY(0px);
+        transform: translateX(0px);
+    } 
+}

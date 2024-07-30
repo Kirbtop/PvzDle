@@ -1,2 +1,2 @@
-# Kirbtop.github.io
+# PlantDle
 It's Wordle, but with Pvz!

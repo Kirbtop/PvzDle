@@ -3,7 +3,7 @@ It's like Wordle, but with Plants VS Zombies!<br>
 The goal of the game is to guess the Today's plant!<br>
 Every day, a new plant is chosen for you to guess, if you continuously getting it right, you will increase your<br>
 win-streak, if you lose a game, you will lose your win-streak too.<br>
-Every plant that's in the Game you can normally can use in the original game, plants that you cannot use via normal play (like vasebreaker or conveyor-belt level) <br>
+Every plant that's in the Game you can normally can use in the original game, plants that you cannot use via normal play <br>(like vasebreaker or conveyor-belt level)
 or unused isn't on the list of chosen plant.<br>
 In total, you have 6 guesses per day, if you spent all your guesses, you lose.<br><br>
 
@@ -57,7 +57,7 @@ Agora, iremos para os textos inglês traduzidos!<br><br>
 O objetivo do jogo  é descobri a planta do dia!<br>
 Todo dia, uma nova planta é escolhida aleatoriamente, e se você acertar continualmente, você vai aumentar sua<br>
 sequência de vitórias, se você perde uma partida, você perde sua senquencias de vitórias também.<br>
-Todas as plantas que estão no jogo são plantas que normalmente tem no jogo original, plantas que não da para usar normalmente (tipo o mini-game dos vasos) <br>
+Todas as plantas que estão no jogo são plantas que normalmente tem no jogo original, plantas que não da para usar normalmente <br>(tipo o mini-game dos vasos)
 ou não utilizado não estarão na lista.<br>
 No total, Você tem 6 tentativas por dia, se você gastar todas as suas tentativas, você perde.<br><br>
 

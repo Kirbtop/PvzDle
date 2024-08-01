@@ -289,6 +289,9 @@ var yipe = 1
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);
             lalalala++
+            if (document.getElementById("solquantidade1").innerText == "undefined") {
+                window.location.reload()
+            }
         }, 1000);
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);

@@ -237,10 +237,16 @@
             var ganho = document.createElement("a");
             ganho.innerText = "ganho!";
             document.getElementById("escolha").disabled = true
+            let jaganhou = getStreak("JaGanhou");
+            if (jaganhou == "") {
+                jaganhou = 0
+            }
+            if (jaganhou == 0) {
             const audio = document.getElementById('audioPlayer');
-            audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FVictory.webm?alt=media&token=68a664fe-c09c-42ac-926e-e93beb6c62a5"
-            trofeeeu()
-            audio.play();
+                audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FVictory.webm?alt=media&token=68a664fe-c09c-42ac-926e-e93beb6c62a5"
+                trofeeeu()
+                audio.play();
+            }
             derrota = parseInt(derrota)
             derrota = derrota + 1
             var comemoracao = ""
@@ -265,9 +271,15 @@
             document.getElementById("coisadesom").style.cursor = ""
             winStreak()
         } else if (derrota == 5) {
-            const audio = document.getElementById('audioPlayer');
-            audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2Flosemusic.ogg?alt=media&token=1867864d-ba33-4e32-9fbf-498e88e3fb73"
-            audio.play();
+            let jaganhou = getStreak("JaGanhou");
+            if (jaganhou == "") {
+                jaganhou = 0
+            }
+            if (jaganhou == 0) {
+                const audio = document.getElementById('audioPlayer');
+                audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2Flosemusic.ogg?alt=media&token=1867864d-ba33-4e32-9fbf-498e88e3fb73"
+                audio.play();
+            }
             document.getElementById("mensagem").innerText = "You lose! The today's Plant was: "+NomeDoDia.charAt(0).toUpperCase() + NomeDoDia.slice(1) +"!"
             document.getElementById("escolha").disabled = true
             document.getElementById("tentativas").style.display = "none"

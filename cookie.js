@@ -94,7 +94,7 @@ function testecookie() {
           comparar(Planta)
           numerodeplantas++
       }
-    }, 1000 )
+    }, 2000 )
   }
 }
 

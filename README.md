@@ -41,7 +41,7 @@ If you want to know more about Emanuel's work, you can access his Behance: https
 Bem, como vocês viram, este é um projeto feito por um "Brasileiro" (Eu não nasci no Brasil, porém eu vivo aqui desde bebê a mais de 18 anos, então eu meio que me considero brasileiro de certa forma).<br>
 Eu criei esse projeto na bobeira e no final ele ficou desse jeito e fico muito orgulhoso dele!<br>
 Por que o site está em inglês? Por que não tem tradução em português?<br>
-Na ideia original, era para ter a opção de duas línguas, o inglês é o português, porém, o trabalho que eu tive para fazer as imagens em inglês já deram muito trabalho, e como queria terminar<br>
+Na ideia original, era para ter a opção de duas línguas, o inglês é o português, porém, o trabalho que eu tive para fazer as imagens em inglês já deram muito trabalho, e como queria terminar
 este projeto, eu deixei de lado a tradução em português (Em outras palavras, sou preguiçoso e ansioso).<br>
 E também o fato de que no Brasil não vejo muita coisa de Plants VS Zombies, então deixei o inglês porque mais gente poderia conhecer este projeto!<br>
 Porém, eu ainda tenho a ideia para lançar uma tradução em português, ou talvez não tenha, não sei, só o tempo dirá.<br><br>

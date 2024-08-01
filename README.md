@@ -1,13 +1,13 @@
 # What's "PvzDle"?
 It's like Wordle, but with Plants VS Zombies!<br>
-The goal of the game is to guess the Today's plant!
-Every day, a new plant is chosen for you to guess, if you continuously getting it right, you will increase your
-win-streak, if you lose a game, you will lose your win-streak too.
-Every plant that's in the Game you can normally can use in the original game, plants that you cannot use via normal play (like vasebreaker or conveyor-belt level) 
-or unused isn't on the list of chosen plant.
-In total, you have 6 guesses per day, if you spent all your guesses, you lose.
+The goal of the game is to guess the Today's plant!<br>
+Every day, a new plant is chosen for you to guess, if you continuously getting it right, you will increase your<br>
+win-streak, if you lose a game, you will lose your win-streak too.<br>
+Every plant that's in the Game you can normally can use in the original game, plants that you cannot use via normal play (like vasebreaker or conveyor-belt level) <br>
+or unused isn't on the list of chosen plant.<br>
+In total, you have 6 guesses per day, if you spent all your guesses, you lose.<br><br>
 
-Want to know more? Just click on the "How to play" in the game's menu!
+Want to know more? Just click on the "How to play" in the game's menu!<br><br>
 
 # Features
 
@@ -38,30 +38,30 @@ If you want to know more about Emanuel's work, you can access his Behance: https
 
 # Tradução para o português Brasil
 
-Bem, como vocês viram, este é um projeto feito por um "Brasileiro" (Eu não nasci no Brasil, porém eu vivo aqui desde bebê a mais de 18 anos, então eu meio que me considero brasileiro de certa forma).
-Eu criei esse projeto na bobeira e no final ele ficou desse jeito e fico muito orgulhoso dele!
-Por que o site está em inglês? Por que não tem tradução em português?
-Na ideia original, era para ter a opção de duas línguas, o inglês é o português, porém, o trabalho que eu tive para fazer as imagens em inglês já deram muito trabalho, e como queria terminar
-este projeto, eu deixei de lado a tradução em português (Em outras palavras, sou preguiçoso e ansioso).
-E também o fato de que no Brasil não vejo muita coisa de Plants VS Zombies, então deixei o inglês porque mais gente poderia conhecer este projeto!
-Porém, eu ainda tenho a ideia para lançar uma tradução em português, ou talvez não tenha, não sei, só o tempo dirá.
+Bem, como vocês viram, este é um projeto feito por um "Brasileiro" (Eu não nasci no Brasil, porém eu vivo aqui desde bebê a mais de 18 anos, então eu meio que me considero brasileiro de certa forma).<br>
+Eu criei esse projeto na bobeira e no final ele ficou desse jeito e fico muito orgulhoso dele!<br>
+Por que o site está em inglês? Por que não tem tradução em português?<br>
+Na ideia original, era para ter a opção de duas línguas, o inglês é o português, porém, o trabalho que eu tive para fazer as imagens em inglês já deram muito trabalho, e como queria terminar<br>
+este projeto, eu deixei de lado a tradução em português (Em outras palavras, sou preguiçoso e ansioso).<br>
+E também o fato de que no Brasil não vejo muita coisa de Plants VS Zombies, então deixei o inglês porque mais gente poderia conhecer este projeto!<br>
+Porém, eu ainda tenho a ideia para lançar uma tradução em português, ou talvez não tenha, não sei, só o tempo dirá.<br><br>
 
-Eu queria agradecer aos meus amigos por darem sugestões de como melhorar o projeto, reportando erros e entre muitas coisas,
-principalmente ao meu amigo Emanuel! Que ele foi de grande ajuda para mim, quando eu precisava de uma ajuda mais complexa em questão de edição de imagem,
-eu pedia ajuda para ele e ele me ajudava toda vez que ele estavá disponível!
+Eu queria agradecer aos meus amigos por darem sugestões de como melhorar o projeto, reportando erros e entre muitas coisas,<br>
+principalmente ao meu amigo Emanuel! Que ele foi de grande ajuda para mim, quando eu precisava de uma ajuda mais complexa em questão de edição de imagem,<br>
+eu pedia ajuda para ele e ele me ajudava toda vez que ele estavá disponível!<br><br>
 
-Agora, iremos para os textos inglês traduzidos!
+Agora, iremos para os textos inglês traduzidos!<br><br>
 
 # O que é "PvzDle"
-É tipo Termo, mas com Plants VS Zombies!
-O objetivo do jogo  é descobri a planta do dia!
-Todo dia, uma nova planta é escolhida aleatoriamente, e se você acertar continualmente, você vai aumentar sua
-sequência de vitórias, se você perde uma partida, você perde sua senquencias de vitórias também.
-Todas as plantas que estão no jogo são plantas que normalmente tem no jogo original, plantas que não da para usar normalmente (tipo o mini-game dos vasos) 
-ou não utilizado não estarão na lista.
-No total, Você tem 6 tentativas por dia, se você gastar todas as suas tentativas, você perde.
+É tipo Termo, mas com Plants VS Zombies!<br>
+O objetivo do jogo  é descobri a planta do dia!<br>
+Todo dia, uma nova planta é escolhida aleatoriamente, e se você acertar continualmente, você vai aumentar sua<br>
+sequência de vitórias, se você perde uma partida, você perde sua senquencias de vitórias também.<br>
+Todas as plantas que estão no jogo são plantas que normalmente tem no jogo original, plantas que não da para usar normalmente (tipo o mini-game dos vasos) <br>
+ou não utilizado não estarão na lista.<br>
+No total, Você tem 6 tentativas por dia, se você gastar todas as suas tentativas, você perde.<br><br>
 
-Você quer saber mais? Basta abrir a pagina "How to play" no menu do jogo!
+Você quer saber mais? Basta abrir a pagina "How to play" no menu do jogo!<br><br>
 
 # Conteúdo
 

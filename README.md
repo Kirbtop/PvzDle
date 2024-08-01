@@ -1,5 +1,5 @@
 # What's "PvzDle"?
-It's like Wordle, but with Plants VS Zombies!
+It's like Wordle, but with Plants VS Zombies!<br>
 The goal of the game is to guess the Today's plant!
 Every day, a new plant is chosen for you to guess, if you continuously getting it right, you will increase your
 win-streak, if you lose a game, you will lose your win-streak too.

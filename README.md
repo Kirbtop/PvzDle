@@ -9,6 +9,8 @@ In total, you have 6 guesses per day, if you spent all your guesses, you lose.<b
 
 Want to know more? Just click on the "How to play" in the game's menu!<br><br>
 
+Play the game here: https://kirbtop.github.io/PvzDle/PvZ1.HTML <br><br>
+
 # Features
 
 - Wins and streaks scores!
@@ -63,6 +65,8 @@ No total, Você tem 6 tentativas por dia, se você gastar todas as suas tentativ
 
 Você quer saber mais? Basta abrir a pagina "How to play" no menu do jogo!<br><br>
 
+Jogue o jogo aqui: https://kirbtop.github.io/PvzDle/PvZ1.HTML <br><br>
+
 # Conteúdo
 
 - Sistema de vitórias e sequencias!
@@ -80,7 +84,7 @@ Você quer saber mais? Basta abrir a pagina "How to play" no menu do jogo!<br><b
 O jogo vai atualizar quando for preciso.
 Pode ser correção de bugs ou atualizações, não sei, Talvez o tempo dirá.
 
-# Credtis
+# Creditos
 
 Criador do "PvzDle": Kaio "Kirb" Cadorin (eu eu!)
 

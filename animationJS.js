@@ -30,6 +30,7 @@ var yipe = 1
             Perdeu = snapshot.val().Wrong; 
         });
         if (SolEscolhido !== SolDoDia) {
+            errou(numero6)
             corSol = "#dc3545"
         } else {
             corSol = "#198754"

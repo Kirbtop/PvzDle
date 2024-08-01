@@ -286,7 +286,6 @@ var yipe = 1
             document.getElementById("pacote"+lalalala).classList.add("animation");
             lalalala++
             if (document.getElementById("solquantidade1").innerText == "undefined") {
-                window.location.reload()
                 let jaganhou = getStreak("JaGanhou");
                 if (jaganhou == "") {
                     jaganhou = 0
@@ -308,6 +307,9 @@ var yipe = 1
                 streakk = parseInt(streaksdapessoa) - 1
                 document.cookie = `Streak=`+streakk+`; expires=${date.toUTCString()} path=/;Secure; SameSite=Lax;`;
                 }
+                document.getElementById("mensagem").innerText = "!!!"
+                document.getElementById("tentativas").innerText = "!!!"
+                window.location.reload()
             }
         }, 500);
         setTimeout(function () { 

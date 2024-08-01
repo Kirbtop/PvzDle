@@ -90,7 +90,7 @@ function testecookie() {
   if ((tentativa >= 2) || (tentativa <= 7)) {
     setTimeout(function () { 
       while (numerodeplantas != tentativa) {
-          pramta = getPramta("Planta"+numerodeplantas);
+          getPramta("Planta"+numerodeplantas);
           numerodeplantas++
       }
     }, 1000 )

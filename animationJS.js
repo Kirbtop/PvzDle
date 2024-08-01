@@ -206,9 +206,6 @@ var yipe = 1
         solquant.style = "position: absolute; margin-left: 36px; margin-top: 83px; color: "+corSol+"; font-family: PvZFont2; text-align: center"
         solquant.innerText = SolEscolhido
         document.getElementById("yayay"+yipe).appendChild(solquant);
-        if (document.getElementById("solquantidade"+soissoissois).innerText == "undefined") {
-            location.reload()
-        }
         var semente  = document.createElement("img")
         semente.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/Seed_Slots2.png?alt=media&token=7104eeba-2370-4f0c-838a-2423181334dc"
         semente.width = "680"

@@ -90,13 +90,28 @@ function testecookie() {
   if ((tentativa >= 2) || (tentativa <= 7)) {
     setTimeout(function () { 
       while (numerodeplantas != tentativa) {
-          let Planta = getStreak("Planta"+numerodeplantas);
-          comparar(Planta)
+          getPramta("Planta"+numerodeplantas);
           numerodeplantas++
       }
     }, 1000 )
   }
 }
+
+function getPramta(cstreak) {
+    let streak = cstreak + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(streak) == 0) {
+        pramta = c.substring(streak.length, c.length);
+        comparar(pramta)
+      }
+    }
+    return "";
+  }
 
 function trofeeu() {
     let premio = getStreak("Premio");

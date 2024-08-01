@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML>
         <HEAD>
-            <title>PlantDle</title>
+            <title>PvzDle</title>
             <link rel="icon" type="images/png" href="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00"/>
             <meta charset="UTF-8">
         </HEAD>
@@ -50,7 +50,25 @@
         </style>
         <script>
             var numero = 0
+
+            document.addEventListener('DOMContentLoaded', function() {
+            mudancas()
+            })
+
+            function mudancas() {
+            if (isMobile()) {
+                document.getElementById("cartinha").style.marginLeft = "-100px" 
+                document.getElementsByClassName("lirvo")[0].style.marginLeft = "350px" 
+                document.getElementsByClassName("lirvo")[1].style.marginLeft = "100px" 
+                document.getElementsByClassName("lirvo")[2].style.marginLeft = "125px" 
+            }
+            }
             
+            function isMobile() {
+                const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+                return regex.test(navigator.userAgent);
+            }
+
             function tutorial() {
                 if (numero == 0) {
                     document.getElementById("fundinho").style.display = "block"
@@ -79,7 +97,7 @@
             }
         </script>
         <BODY onload="carregar()"> 
-            <img class="cartinha" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FFake_tutorial.png?alt=media&token=ca34ad08-5c78-4c31-907d-d3c0533c5b45">
+            <img id="cartinha" class="cartinha" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FFake_tutorial.png?alt=media&token=ca34ad08-5c78-4c31-907d-d3c0533c5b45">
             <img id="fundinho" class="fundo" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FBackground.png?alt=media&token=675197b6-6aa0-4a8b-8fd2-66a0e54c9ffe">
             <div class="lirvo" style="font-family: 'PvZFont'; width: 500px">
                 <br>

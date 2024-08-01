@@ -2,6 +2,14 @@
     animation: tutstuts 0.5s infinite
 }
 
+#divdasfields.animation {
+    animation: oitudobem 1s ease-in-out forwards
+}
+
+#divdasfields.animation2 {
+    animation: tchau 1s ease-in-out forwards
+}
+
 @keyframes tutstuts {
     0% {
         height: 50px;
@@ -16,6 +24,24 @@
     100% {
         height: 50px;
         transform: translateY(0px);
+        transform: translateX(0px);
+    } 
+}
+
+@keyframes oitudobem {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-240px);
+    } 
+}
+
+@keyframes tchau {
+    0% {
+        transform: translateX(-240px);
+    }
+    100% {
         transform: translateX(0px);
     } 
 }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <HTML>
         <HEAD>
-            <title>PlantDle</title>
+            <title>PvzDle</title>
             <link rel="icon" type="images/png" href="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00"/>
             <meta charset="UTF-8">
             <link rel="stylesheet" type="text/css" href="animation.CSS">
@@ -80,7 +80,6 @@
             display: flex;
             gap: 25px;
             background: url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FPlaca.png?alt=media&token=570783a7-01a7-4fa1-b253-6fd7bba96344');
-            background-repeat: no-repeat;
         }
 
     </style>
@@ -110,6 +109,7 @@
     var numerodocookie = 0
     var date = ""
     var pause = 0
+    var awsd = 0
 
     document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("escolha").value = ""
@@ -119,6 +119,7 @@
         tocador.controls = true
         tocador.style = "display: none"
         document.getElementById("naoseinomeparabotarnestadiv").appendChild(tocador);
+        mudancas()
     });
 
     while (numero < totalplantas ) {
@@ -249,7 +250,7 @@
             } else if (derrota == 2) {
                 derrota = "second"
             } else if (derrota == 3) {
-                derrota = "third"
+                derrota = "thirth"
             } else if (derrota == 4) {
                 derrota = "fourth"
             } else if (derrota == 5) {
@@ -332,35 +333,55 @@
     }
 
     function fundo1() {
-        document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FFrontyard.webp?alt=media&token=41b6e4b9-3fff-447d-bd63-d6290e1d7371"
+        if (isMobile()) {
+             document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FFrontyardMobile.webp?alt=media&token=a65eceb2-79ab-43c6-8f0c-d231c22e6127"
+        } else {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FFrontyard.webp?alt=media&token=41b6e4b9-3fff-447d-bd63-d6290e1d7371"
+        }
         document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FGrasswalk%20(In-Game).webm?alt=media&token=cdfd67b8-c14e-423b-9ef8-d8585a851ceb"
         gravarfundo(1)
         tocarnovamente()
     }
 
     function fundo2() {
-        document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FNightfrontyard.webp?alt=media&token=75637d1f-8fa6-4c4a-b995-d0674eb676f8"
+        if (isMobile()) {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2F1.png?alt=media&token=1bbdce18-84cd-42ff-8caf-3e63c1b9bbc2"
+        } else {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FNightfrontyard.webp?alt=media&token=75637d1f-8fa6-4c4a-b995-d0674eb676f8"
+        }
         document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FMoongrains%20(In-Game).webm?alt=media&token=c4631c6c-9d72-4668-957e-b870c9927e28"
         gravarfundo(2)
         tocarnovamente()
     }
 
     function fundo3() {
-        document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FBackground3.webp?alt=media&token=e98b26e7-9793-4ec1-ac9d-4040f7e3b676"
+        if (isMobile()) {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2F2.png?alt=media&token=9de304d2-022f-4363-b9e6-996b6585bae3"
+        } else {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FBackground3.webp?alt=media&token=e98b26e7-9793-4ec1-ac9d-4040f7e3b676"
+        }
         document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FWatery%20Graves%20(In-Game).webm?alt=media&token=5322e7b7-565f-4fdf-bc90-486966b4df73"
         gravarfundo(3)
         tocarnovamente()
     }
 
     function fundo4() {
-        document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FBackground4.webp?alt=media&token=b5277b7c-e20a-42cb-9284-1d15e05888ed"
+        if (isMobile()) {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2F3.png?alt=media&token=2838ce9e-53b2-4fe9-8b80-d92dbd4cba4e"
+        } else {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FBackground4.webp?alt=media&token=b5277b7c-e20a-42cb-9284-1d15e05888ed"
+        }
         document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FRigor%20Mormist%20(In-Game).webm?alt=media&token=40fdd9b8-7e3e-453c-98a4-1d2c53440fc3"
         gravarfundo(4)
         tocarnovamente()
     }
 
     function fundo5() {
-        document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FRoof_(New).webp?alt=media&token=1d2f96c1-85c8-4430-acfb-fe4eda193acd"
+        if (isMobile()) {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2F4.png?alt=media&token=c6396236-a779-4cda-be0d-8595da6c07f4"
+        } else {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FWorld%2FRoof_(New).webp?alt=media&token=1d2f96c1-85c8-4430-acfb-fe4eda193acd"
+        }
         document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FGraze%20the%20Roof%20(In-Game).webm?alt=media&token=7cde5dd1-f9d7-42d3-9070-f0dbb450da1f"
         gravarfundo(5)
         tocarnovamente()
@@ -402,6 +423,35 @@
         }
     }
 
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
+    }
+
+    function apareceu() {
+        if (awsd == 0) {
+            document.getElementById("divdasfields").classList.add("animation")
+            document.getElementById("divdasfields").classList.remove("animation2")
+            awsd++
+        } else {
+            document.getElementById("divdasfields").classList.add("animation2")
+            document.getElementById("divdasfields").classList.remove("animation")
+            awsd--
+        }
+    }
+   
+    function mudancas() {
+        if (isMobile()) {
+            document.getElementById("divdasfields").setAttribute( "onClick", "apareceu()" );
+            document.getElementById("botaodomenu").style.marginLeft = "750px"
+            document.getElementById("pause").style.marginLeft = "-75px"
+            document.getElementById("div").style.marginLeft = "265px"
+            document.getElementById("fundo2").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fpartedecima2.png?alt=media&token=fdb67bcc-7e5a-4b80-b222-c5e2d6fbf3c8"
+        } else {
+            document.getElementById("naoseinomeparabotarnestadiv").style.fontSize = "1vw"
+        }
+    }
+
     </script>
         <BODY onload="verfundo()">
             <img id="fundinho" class="fundo" src="">
@@ -417,10 +467,10 @@
                 <img style="margin-left: -285px; margin-top: 390px; cursor: pointer; position: fixed; height: 85px; z-index: 10000" onclick="menupause()" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2Foptions_backtogamebutton1.png?alt=media&token=eace9dd5-08ea-448d-b4f9-9288da7ab3a5">
                 <img class="menu" style="margin-left: -345px;" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2Fmenu.png?alt=media&token=d32e4de8-2df7-45bd-afa5-b56a3426f821">
             </div>
-            <img class="fundo2" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fpartedecima.png?alt=media&token=a5011f1c-e193-4ea9-a75e-598682bd5caf">
+            <img id="fundo2" class="fundo2" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fpartedecima.png?alt=media&token=a5011f1c-e193-4ea9-a75e-598682bd5caf">
             <div id="naoseinomeparabotarnestadiv" style="font-family: PvZFont;">
             <a style="margin-left: 30px">Images</a> and info from the <a href="https://plantsvszombies.fandom.com/wiki/Plants_vs._Zombies">Game's Wikipedia</a>
-            <img height="50px" class="center" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00">
+            <img height="50px" class="center" style="width: 100%; max-width: 50px;" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00">
             <img height="50px" class="right" id="botaodomenu" onclick="menupause()" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fmenu_button.png?alt=media&token=080087e3-b517-4e88-9e16-2ca5fc70fd79">
             <div style="text-align: center;">
             Guess the today's Plant!

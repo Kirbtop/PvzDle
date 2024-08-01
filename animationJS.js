@@ -309,7 +309,9 @@ var yipe = 1
                 }
                 document.getElementById("mensagem").innerText = "!!!"
                 document.getElementById("tentativas").innerText = "!!!"
-                window.location.reload()
+                setTimeout(function () { 
+                    window.location.reload()
+                }, 500)
             }
         }, 500);
         setTimeout(function () { 

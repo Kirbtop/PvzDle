@@ -26,7 +26,7 @@ Want to know more? Just click on the "How to play" in the game's menu!<br><br>
 The game will be updated whenever it's needed.
 Can be for bug fix or new features, i don't know, maybe time will tell.
 
-# Credtis
+# Credits
 
 The creator of PvzDle: Kaio "Kirb" Cadorin (me!)
 
@@ -46,8 +46,8 @@ este projeto, eu deixei de lado a tradução em português (Em outras palavras, 
 E também o fato de que no Brasil não vejo muita coisa de Plants VS Zombies, então deixei o inglês porque mais gente poderia conhecer este projeto!<br>
 Porém, eu ainda tenho a ideia para lançar uma tradução em português, ou talvez não tenha, não sei, só o tempo dirá.<br><br>
 
-Eu queria agradecer aos meus amigos por darem sugestões de como melhorar o projeto, reportando erros e entre muitas coisas,<br>
-principalmente ao meu amigo Emanuel! Que ele foi de grande ajuda para mim, quando eu precisava de uma ajuda mais complexa em questão de edição de imagem,<br>
+Eu queria agradecer aos meus amigos por darem sugestões de como melhorar o projeto, reportando erros e entre muitas coisas.<br>
+Principalmente ao meu amigo Emanuel! Que ele foi de grande ajuda para mim, quando eu precisava de uma ajuda mais complexa em questão de edição de imagem,<br>
 eu pedia ajuda para ele e ele me ajudava toda vez que ele estavá disponível!<br><br>
 
 Agora, iremos para os textos inglês traduzidos!<br><br>

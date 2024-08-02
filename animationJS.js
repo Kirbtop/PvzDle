@@ -285,6 +285,34 @@ var yipe = 1
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation");
             lalalala++
+            if (document.getElementById("solquantidade1").innerText == "undefined") {
+                let jaganhou = getStreak("JaGanhou");
+                if (jaganhou == "") {
+                    jaganhou = 0
+                }
+                if (jaganhou == 0) {
+                    let vitoriasdapessoa = getStreak("Vitorias");
+                    let streaksdapessoa = getStreak("Streak");
+                    if (streaksdapessoa == "") {
+                        streaksdapessoa = 0
+                    }
+                   if (vitoriasdapessoa == "") {
+                        vitoriasdapessoa = 0
+                    }
+                vitoria = parseInt(vitoriasdapessoa) - 1
+                document.cookie = `Vitorias=`+vitoria+`; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;
+                const date = new Date();
+                date.setDate(date.getDate() + 2);
+                date.setHours(0, 0, 0, 0);
+                streakk = parseInt(streaksdapessoa) - 1
+                document.cookie = `Streak=`+streakk+`; expires=${date.toUTCString()} path=/;Secure; SameSite=Lax;`;
+                }
+                document.getElementById("mensagem").innerText = "!!!"
+                document.getElementById("tentativas").innerText = "!!!"
+                setTimeout(function () { 
+                    window.location.reload()
+                }, 500)
+            }
         }, 500);
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);

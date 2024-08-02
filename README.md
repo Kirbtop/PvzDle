@@ -1,13 +1,13 @@
 # What's "PvzDle"?
 It's like Wordle, but with Plants VS Zombies!<br>
-The goal of the game is to guess the Today's plant!<br>
+The goal of the game is guessing the Today's plant!<br>
 Every day, a new plant is chosen for you to guess, if you continuously getting it right, you will increase your<br>
 win-streak, if you lose a game, you will lose your win-streak too.<br>
-Every plant that's in the Game you can normally can use in the original game, plants that you cannot use <br>via normal play (like vasebreaker or conveyor-belt level)
-or unused isn't on the list of chosen plant.<br>
+Every plant that's in the Game you can normally use in the original game, plants that you cannot use <br>via normal play (like vasebreaker or conveyor-belt level)
+or unused aren't on the list of chosen plant.<br>
 In total, you have 6 guesses per day, if you spent all your guesses, you lose.<br><br>
 
-Want to know more? Just click on the "How to play" in the game's menu!<br><br>
+Want to know more? Just click on "How to play" button in the game's menu!<br><br>
 
 Play the game here: https://kirbtop.github.io/PvzDle/ <br><br>
 
@@ -84,7 +84,7 @@ Jogue o jogo aqui: https://kirbtop.github.io/PvzDle/ <br><br>
 O jogo vai atualizar quando for preciso.
 Pode ser correção de bugs ou atualizações, não sei, Talvez o tempo dirá.
 
-# Creditos
+# Créditos
 
 Criador do "PvzDle": Kaio "Kirb" Cadorin (eu eu!)
 

@@ -9,7 +9,7 @@ In total, you have 6 guesses per day, if you spent all your guesses, you lose.<b
 
 Want to know more? Just click on the "How to play" in the game's menu!<br><br>
 
-Play the game here: https://kirbtop.github.io/PvzDle/PvZ1.HTML <br><br>
+Play the game here: https://kirbtop.github.io/PvzDle/ <br><br>
 
 # Features
 
@@ -65,7 +65,7 @@ No total, Você tem 6 tentativas por dia, se você gastar todas as suas tentativ
 
 Você quer saber mais? Basta abrir a pagina "How to play" no menu do jogo!<br><br>
 
-Jogue o jogo aqui: https://kirbtop.github.io/PvzDle/PvZ1.HTML <br><br>
+Jogue o jogo aqui: https://kirbtop.github.io/PvzDle/ <br><br>
 
 # Conteúdo
 

@@ -266,6 +266,7 @@
                 derrota = "sixth"
             }
             document.getElementById("mensagem").innerText = "Victory! You won at "+derrota+" try! "+comemoracao
+            document.getElementById("some").innerText = ""
             document.getElementById("tentativas").style.display = "none"
             document.getElementById("coisadesom").classList.remove("animation")
             document.getElementById("coisadesom").onclick = ""
@@ -282,6 +283,7 @@
                 audio.play();
             }
             document.getElementById("mensagem").innerText = "You lose! The today's Plant was: "+NomeDoDia.charAt(0).toUpperCase() + NomeDoDia.slice(1) +"!"
+            document.getElementById("some").innerText = ""
             document.getElementById("escolha").disabled = true
             document.getElementById("tentativas").style.display = "none"
             var fotodaplanta = document.createElement("img")
@@ -491,7 +493,7 @@
             <input id="escolha" oninput="ver()" style="font-family: Arial, Helvetica, sans-serif !important;">
             <br>
             <div id="lalalali">
-            <a id="mensagem">Guesses <a id="tentativas">0</a>/6</a>
+            <a id="mensagem">Guesses <a id="tentativas">0</a><a id="some">/6</a></a>
             </div></div></div>
             <div class="divdasfields" id="divdasfields" style="position: absolute; margin-top: 20px; z-index: 999999; width: 300px; height: 200px">
                 <fieldset style="margin-left: 45px; color: #bd7d26;">

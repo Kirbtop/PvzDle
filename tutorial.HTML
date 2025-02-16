@@ -20,8 +20,10 @@
         }
         .cartinha {
             top: 15%;
-            left: 30%;
-            position: fixed;
+            display: block;
+            size: 100%;
+            margin-left: auto;
+            margin-right: auto;
         }
         .fundo {
             top: 0;
@@ -71,6 +73,7 @@
 
             function tutorial() {
                 if (numero == 0) {
+                    document.getElementById("cartinha").style.display = "none"
                     document.getElementById("fundinho").style.display = "block"
                     document.getElementsByClassName("lirvo")[0].style.display = "block"
                     document.getElementsByClassName("lirvo")[1].style.display = "block"
@@ -80,6 +83,7 @@
                     document.getElementById("botao").innerText = "Back"
                     numero++
                 } else {
+                    document.getElementById("cartinha").style.display = "block"
                     document.getElementById("fundinho").style.display = "none"
                     document.getElementsByClassName("lirvo")[0].style.display = "none"
                     document.getElementsByClassName("lirvo")[1].style.display = "none"
@@ -97,6 +101,7 @@
             }
         </script>
         <BODY onload="carregar()"> 
+            <br><br>
             <img id="cartinha" class="cartinha" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FFake_tutorial.png?alt=media&token=ca34ad08-5c78-4c31-907d-d3c0533c5b45">
             <img id="fundinho" class="fundo" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FBackground.png?alt=media&token=675197b6-6aa0-4a8b-8fd2-66a0e54c9ffe">
             <div class="lirvo" style="font-family: 'PvZFont'; width: 500px">
@@ -107,13 +112,13 @@
             <br>
             <div class="lirvo" style="font-family: 'PvZFont2'; font-size: 20px; width: 1000px;">
                 <br>
-                The goal of the game is guessing the Today's plant!<br>
-                Every day, a new plant is chosen for you to guess, if you continuously getting it right, you will increase your<br>
-                win-streak, if you lose a game, you will lose your win-streak too.<br>
-                Every plant that's in the Game you can normally use in the original game, plants that you cannot use<br>
-                via normal play (like vasebreaker or conveyor-belt level) or unused aren't on the list of chosen plant.<br>
-                In total, you have 6 guesses per day, if you spent all your guesses, you lose.<br><br>
-                What does each seeds packet means?
+                The goal of the game is to guess today's plant!<br>
+                Each day, a new plant is selected for you to guess. If you guess correctly, your win-streak will grow. However,<br>
+                if you lose a game, your win-streak will reset.<br>
+                Only the 49 plants that are available in regular gameplay are included.<br>
+                Explode-o-nut, Giant Wall-nut, Sprout, and Reverse Repeater are excluded from the selection.<br>
+                You have 6 guesses per day. If you spend all your guesses, you lose.<br><br>
+                What does each seed packet mean?
                 <br><br>
             </div>
             <br>
@@ -140,8 +145,10 @@
                 Original game was made by Popcap Games.
                 <br><br>
             </div>
-            <br><br><a id="a"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></a>
+            <br><br><a id="a"><br></a>
             <div id="botaodiv" class="lirvo" style="width: 150px; text-align: center; z-index: 9999; position: relative; display: none; font-family: PvZFont2; font-size: 25px; border: 0px; border-radius: 0px; background-color: #793300; color: #cb8b2a;">
                 <a id="botao" style="cursor: pointer"onclick="tutorial()">Real tutorial</a>
             </div>
             <br><br>
+        </BODY>
+</HTML>

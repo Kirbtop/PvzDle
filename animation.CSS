@@ -221,7 +221,7 @@
     }
     }
     
-    .modal-content.animacao {
+    #modal-content.animacao {
         animation: aeesubiu  1s ease-in-out forwards
     }
     @keyframes aeesubiu {
@@ -234,7 +234,7 @@
             opacity: 1;
         }
     }
-    .modal-content.animacao2 {
+    #modal-content.animacao2 {
         animation: aeedesceu  1s ease-in-out forwards
     }
     @keyframes aeedesceu {
@@ -245,7 +245,7 @@
             transform: translate(-50%, 85%);
         }
     }
-    .modal-content.animacao3 {
+    #modal-content.animacao3 {
         animation: aeesubiudnv  1s ease-in-out forwards
     }
     @keyframes aeesubiudnv {
@@ -267,7 +267,7 @@
             opacity: 0
         }
     }
-    .modal-content.animacao4 {
+    #modal-content.animacao4 {
         animation: aeedesceu  1s ease-in-out forwards
     }
     @keyframes aeedesceu2 {
@@ -278,7 +278,7 @@
             transform: translate(-50%, 128%);
         }
     }
-    .modal-content.animacao5 {
+    #modal-content.animacao5 {
         animation: aeesubiudnv  1s ease-in-out forwards
     }
     @keyframes aeesubiudnv2 {

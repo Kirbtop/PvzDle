@@ -633,18 +633,18 @@ function NAOVAIJOGARNAO() {
 }
 
 function descerquadrado() {
-    document.getElementsByClassName("modal-content")[0].classList.remove("animacao");
+    document.getElementById("modal-content").classList.remove("animacao");
     if (quadrado == 0){
-        document.getElementsByClassName("modal-content")[0].classList.remove("animacao"+numeroquadradodois);
-        document.getElementsByClassName("modal-content")[0].classList.add("animacao"+numeroquadrado);
+        document.getElementById("modal-content").classList.remove("animacao"+numeroquadradodois);
+        document.getElementById("modal-content").classList.add("animacao"+numeroquadrado);
         document.getElementById("botaodomenu").style.cursor = "pointer"
         document.getElementById("botaodomenu").setAttribute( "onClick", "menupause()" );
-        document.getElementsByClassName("modal-content")[0].style.background = "url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar.png?alt=media&token=d7a66250-fecb-49fc-8b2f-a54bb6353a51')"
+        document.getElementById("modal-content").style.background = "url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar.png?alt=media&token=d7a66250-fecb-49fc-8b2f-a54bb6353a51')"
         quadrado++
     } else {
-        document.getElementsByClassName("modal-content")[0].classList.remove("animacao"+numeroquadrado);
-        document.getElementsByClassName("modal-content")[0].classList.add("animacao"+numeroquadradodois);
-        document.getElementsByClassName("modal-content")[0].style.background = "url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar2.png?alt=media&token=bda45814-5e71-4dbe-9168-795799059a35')"
+        document.getElementById("modal-content").classList.remove("animacao"+numeroquadrado);
+        document.getElementById("modal-content").classList.add("animacao"+numeroquadradodois);
+        document.getElementById("modal-content").style.background = "url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar2.png?alt=media&token=bda45814-5e71-4dbe-9168-795799059a35')"
         if (pause == 1) {
             menupause()
         }
@@ -710,7 +710,7 @@ function descerquadrado() {
             <div id="yayay2" style="position: relative; text-align: center;"></div>
             <div id="yayay1" style="position: relative; text-align: center;"></div>
             <div id="myModal" class="modal" style="z-index: 99999; overflow: hidden; font-family: 'PvZFont'; pointer-events: none;">
-                <div class="modal-content" style="z-index: 99999; text-align: center;">
+                <div id="modal-content" class="modal-content" style="z-index: 99999; text-align: center;">
                     <button id="butao" onclick="descerquadrado()" class="close" style="opacity: 0">-----------</button>
                     <div id="separamento" style="font-size: large; height: 190px; align-items: center; justify-content: center;">
                         <a id="compartilharmensagem6" style="margin-top: -10x"></a>

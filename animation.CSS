@@ -25,40 +25,46 @@
         z-index: 9995
     }
     .pacote.animation, .pacote.animation8, .pacote.animation15, .pacote.animation22, .pacote.animation29, .pacote.animation36 {
-        opacity: 1;
-        animation: apareceu 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu 0.7s ease-in-out forwards
     }
     .pacote.animation2, .pacote.animation9, .pacote.animation16, .pacote.animation23, .pacote.animation30, .pacote.animation37 {
-        opacity: 1;
-        animation: apareceu2 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu2 0.7s ease-in-out forwards
     }
     .pacote.animation3, .pacote.animation10, .pacote.animation17, .pacote.animation24, .pacote.animation31, .pacote.animation38 {
-        opacity: 1;
-        animation: apareceu3 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu3 0.7s ease-in-out forwards
     }
     .pacote.animation4, .pacote.animation11, .pacote.animation18, .pacote.animation25, .pacote.animation32, .pacote.animation39 {
-        opacity: 1;
-        animation: apareceu4 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu4 0.7s ease-in-out forwards
     }
     .pacote.animation5, .pacote.animation12, .pacote.animation19, .pacote.animation26, .pacote.animation33, .pacote.animation40 {
-        opacity: 1;
-        animation: apareceu5 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu5 0.7s ease-in-out forwards
     }
     .pacote.animation6, .pacote.animation13, .pacote.animation20, .pacote.animation27, .pacote.animation34, .pacote.animation41 {
-        opacity: 1;
-        animation: apareceu6 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu6 0.7s ease-in-out forwards
     }
     .pacote.animation7, .pacote.animation14, .pacote.animation21, .pacote.animation28, .pacote.animation35, .pacote.animation42 {
-        opacity: 1;
-        animation: apareceu7 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu7 0.7s ease-in-out forwards
     }
     .sol.animation1, .sol.animation2, .sol.animation3, .sol.animation4, .sol.animation5, .sol.animation6 {
-        opacity: 1;
-        animation: apareceu8 0.5s ease-in-out forwards
+        opacity: 0;
+        animation: apareceu8 0.7s ease-in-out forwards
     }
     @keyframes apareceu {
     0% {
         transform: translateY(380px) translateX(145px);
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
     }
     95% {
         transform: translateY(1px);
@@ -67,12 +73,19 @@
     100% {
         transform: translateY(0px);
         transform: translateX(0px);
+        opacity: 1; 
     }
     }
     @keyframes apareceu2 {
     0% {
         transform: translateY(380px) translateX(105px);
     }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
     95% {
         transform: translateY(1px);
         transform: translateX(1px);
@@ -80,12 +93,19 @@
     100% {
         transform: translateY(0px);
         transform: translateX(0px);
+        opacity: 1; 
     }
     }
     @keyframes apareceu3 {
     0% {
         transform: translateY(380px) translateX(65px);
     }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
     95% {
         transform: translateY(1px);
         transform: translateX(1px);
@@ -93,12 +113,19 @@
     100% {
         transform: translateY(0px);
         transform: translateX(0px);
+        opacity: 1; 
     }
     }
     @keyframes apareceu4 {
     0% {
         transform: translateY(380px) translateX(25px);
     }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
     95% {
         transform: translateY(1px);
         transform: translateX(1px);
@@ -106,12 +133,19 @@
     100% {
         transform: translateY(0px);
         transform: translateX(0px);
+        opacity: 1; 
     }
     }
     @keyframes apareceu5 {
     0% {
         transform: translateY(380px) translateX(-65px);
     }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
     95% {
         transform: translateY(1px);
         transform: translateX(1px);
@@ -119,12 +153,19 @@
     100% {
         transform: translateY(0px);
         transform: translateX(0px);
+        opacity: 1; 
     }
     }
     @keyframes apareceu6 {
     0% {
         transform: translateY(380px) translateX(-105px);
     }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
     95% {
         transform: translateY(1px);
         transform: translateX(1px);
@@ -132,12 +173,19 @@
     100% {
         transform: translateY(0px);
         transform: translateX(0px);
+        opacity: 1; 
     }
     }
     @keyframes apareceu7 {
     0% {
         transform: translateY(380px) translateX(-145px);
     }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
     95% {
         transform: translateY(1px);
         transform: translateX(1px);
@@ -145,12 +193,19 @@
     100% {
         transform: translateY(0px);
         transform: translateX(0px);
+        opacity: 1; 
     }
     }
     @keyframes apareceu8 {
     0% {
         transform: translateY(380px) translateX(400px);
         opacity: 1
+    }
+    4% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
     }
     95% {
         transform: translateY(9px);
@@ -164,4 +219,73 @@
         transform: translateY(10px);
         transform: translateX(-120px);
     }
+    }
+    
+    .modal-content.animacao {
+        animation: aeesubiu  1s ease-in-out forwards
+    }
+    @keyframes aeesubiu {
+        0% {
+            transform: translate(-50%, 100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+    }
+    .modal-content.animacao2 {
+        animation: aeedesceu  1s ease-in-out forwards
+    }
+    @keyframes aeedesceu {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-50%, 85%);
+        }
+    }
+    .modal-content.animacao3 {
+        animation: aeesubiudnv  1s ease-in-out forwards
+    }
+    @keyframes aeesubiudnv {
+        0% {
+            transform: translate(-50%, 85%);
+        }
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
+    .mensagemlalala.animacao {
+        animation: vaidesaparecer  5s ease-in-out forwards
+    }
+    @keyframes vaidesaparecer {
+        0% {
+            opacity: 1
+        }
+        100% {
+            opacity: 0
+        }
+    }
+    .modal-content.animacao4 {
+        animation: aeedesceu  1s ease-in-out forwards
+    }
+    @keyframes aeedesceu2 {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(-50%, 128%);
+        }
+    }
+    .modal-content.animacao5 {
+        animation: aeesubiudnv  1s ease-in-out forwards
+    }
+    @keyframes aeesubiudnv2 {
+        0% {
+            transform: translate(-50%, 128%);
+        }
+        100% {
+            transform: translate(-50%, -50%);
+        }
     }

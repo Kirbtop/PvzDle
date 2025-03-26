@@ -63,7 +63,10 @@
         }
         .menu {
             z-index: 9999;
-            position: relative
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            
         }
         .center {
             display: block;
@@ -75,12 +78,32 @@
             display: block;
             margin-left: 86%;
             margin-top: -45px;
-            cursor: pointer
         }
         .divdasfields {
             display: flex;
             gap: 25px;
-            background: url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FPlaca.png?alt=media&token=570783a7-01a7-4fa1-b253-6fd7bba96344');
+            background: url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FPlacadnv.png?alt=media&token=940172fe-6ac2-4938-a6d7-ffca0231b817');
+        }
+        .modal-content {
+            background: url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar2.png?alt=media&token=bda45814-5e71-4dbe-9168-795799059a35');
+            width: 400px;
+            height: 487px;
+            padding: 20px;
+            border-radius: 8px;
+            width: 50%;
+            max-width: 400px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            color: black
+        }
+        .close {
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
         }
 
     </style>
@@ -101,18 +124,43 @@
 
     var numero = 0;
     var numero2 = 0;
-    var vitoria = 1
-    var derrota = 0
-    var totalplantas = 49
-    var som = 0
-    var lista = []
-    var trofeu = ""
-    var numerodocookie = 0
-    var date = ""
-    var pause = 0
-    var awsd = 0
+    var vitoria = 1;
+    var derrota = 0;
+    var totalplantas = 49;
+    var som = 0;
+    var lista = [];
+    var trofeu = "";
+    var numerodocookie = 0;
+    var date = "";
+    var pause = 0;
+    var awsd = 0;
+    var qnttentativas = 6;
+    var quadrado = 0;
+    var numeroquadrado = 2;
+    var numeroquadradodois = 3;
 
-    document.addEventListener('DOMContentLoaded', function() {
+  let streaksatuaisdapessoa = getStreak("StreakAtual");
+  if (streaksatuaisdapessoa >= 100) {
+    var lalelilo = 4
+    var lalelilu = 3
+  } else if (streaksatuaisdapessoa >= 50) {
+    var lalelilo = 3
+    var lalelilu = 2
+  } else if (streaksatuaisdapessoa >= 25) {
+    var lalelilo = 2
+    var lalelilu = 1
+  } else {
+    var lalelilo = 1
+    var lalelilu = 0
+  } 
+
+  let streak = getStreak("Streak");
+  if (streaksatuaisdapessoa == "") {
+    document.cookie = `StreakAtual=`+streak+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;
+  }
+
+        document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById("numerodetentativas").innerText = qnttentativas - lalelilu
         document.getElementById("escolha").value = ""
         var tocador = document.createElement("audio")
         tocador.id = "audioPlayer"
@@ -120,6 +168,8 @@
         tocador.controls = true
         tocador.style = "display: none"
         document.getElementById("naoseinomeparabotarnestadiv").appendChild(tocador);
+        document.getElementById('escolha').disabled = true
+        document.getElementById("botaodomenu").setAttribute( "onClick", "" );
         mudancas()
     });
 
@@ -134,8 +184,8 @@
             div.onclick = function() { comparar(div.id); };
             document.getElementById("div").appendChild(div);
             var imagemteste = document.createElement("img")
-            imagemteste.setAttribute("src", "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fcadaplanta.png?alt=media&token=27ab5804-f4ed-422e-9594-f109d7418797")
-            imagemteste.setAttribute("style", "position: absolute; z-index: -1")
+            imagemteste.setAttribute("src", "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fcadaplanta2.png?alt=media&token=200ba8f7-6550-4e07-8375-ecd7c6117dbf")
+            imagemteste.setAttribute("style", "position: absolute; z-index: -1;")
             document.getElementById(numero2).appendChild(imagemteste);
             var imagem = document.createElement("img");
             imagem.setAttribute("src", snapshot.val().Image);
@@ -186,7 +236,7 @@
             var upgrade = document.createElement("a");
             upgrade.innerText = snapshot.val().Upgrade;
             upgrade.setAttribute("id", "upgrade"+numero2)
-            upgrade.style = "box-sizing: content-box; display: inline-block; width: 70px; text-align: center;"
+            upgrade.style = "box-sizing: content-box; display: inline-block; width: 70px; text-align: center; display: none"
             document.getElementById(numero2).appendChild(upgrade);
             lista.push(snapshot.val().Name);
             numero2++
@@ -199,9 +249,9 @@
     var semana = (new Date().getDay()) + 1
     
     if (semana == 3 ) {
-        semana = 5
+        semana = 10
     } else if (semana % 2 == 0) {
-        semana = 2
+        semana = 20
     } else {
         semana = 1
     }
@@ -213,7 +263,9 @@
         if (PlantaDoDia <= 0) {
             PlantaDoDia = PlantaDoDia * (-1)
         }
-
+        if (PlantaDoDia == 43) {
+            PlantaDoDia = 21
+        }
     }
 
     var SolDoDia, UpgradeDoDia, MundoDoDia, AreaDoDia, DanoDoDia, CarregamentoDoDia, specialDoDia, NomeDoDia;
@@ -234,6 +286,7 @@
     function comparar(numero3) {
         document.getElementById("naoseiqualnomedar").style.opacity = "1"
         clicar(numero3)
+        seraqueperdeu = qnttentativas - lalelilo
         if (vitoria == 1) {
             var ganho = document.createElement("a");
             ganho.innerText = "ganho!";
@@ -251,28 +304,48 @@
             derrota = parseInt(derrota)
             derrota = derrota + 1
             var comemoracao = ""
+            var emoji = ""
+            var eaivei = ""
             if (derrota == 1) {
                 derrota = "*FIRST*"
                 comemoracao = "Good job! You are really lucky, aren't you?"
+                emoji = "\n1️⃣🟩🟩🟩🟩🟩🟩🟩"
+                eaivei = "1"
             } else if (derrota == 2) {
                 derrota = "second"
+                emoji = "\n2️⃣🟩🟩🟩🟩🟩🟩🟩"
+                eaivei = "2"
             } else if (derrota == 3) {
                 derrota = "third"
+                emoji = "\n3️⃣🟩🟩🟩🟩🟩🟩🟩"
+                eaivei = "3"
             } else if (derrota == 4) {
                 derrota = "fourth"
+                emoji = "\n4️⃣🟩🟩🟩🟩🟩🟩🟩"
+                eaivei = "4"
             } else if (derrota == 5) {
                 derrota = "fifth"
+                emoji = "\n5️⃣🟩🟩🟩🟩🟩🟩🟩"
+                eaivei = "5"
             } else {
                 derrota = "sixth"
+                emoji = "\n6️⃣🟩🟩🟩🟩🟩🟩🟩"
+                eaivei = "6"
             }
             document.getElementById("mensagem").innerText = "Victory! You won at the "+derrota+" try! "+comemoracao
             document.getElementById("some").innerText = ""
             document.getElementById("tentativas").style.display = "none"
+            document.getElementById("numerodetentativas").style.display = "none"
             document.getElementById("coisadesom").classList.remove("animation")
             document.getElementById("coisadesom").onclick = ""
             document.getElementById("coisadesom").style.cursor = ""
+            document.getElementById("compartilharmensagem"+eaivei).innerText = emoji
             winStreak()
-        } else if (derrota == 5) {
+            setTimeout(function () { 
+                document.getElementById("myModal").style.display = "block"
+                document.getElementsByClassName("modal-content")[0].classList.add("animacao");
+            }, 4500);
+        } else if (derrota == seraqueperdeu) {
             let jaganhou = getStreak("JaGanhou");
             if (jaganhou == "") {
                 jaganhou = 0
@@ -286,6 +359,7 @@
             document.getElementById("some").innerText = ""
             document.getElementById("escolha").disabled = true
             document.getElementById("tentativas").style.display = "none"
+            document.getElementById("numerodetentativas").style.display = "none"
             var fotodaplanta = document.createElement("img")
             fotodaplanta.src = ImagemDoDia
             fotodaplanta.height = "25"
@@ -295,6 +369,10 @@
             document.getElementById("coisadesom").onclick = ""
             document.getElementById("coisadesom").style.cursor = ""
             lostStreak()
+            setTimeout(function () { 
+                document.getElementById("myModal").style.display = "block"
+                document.getElementsByClassName("modal-content")[0].classList.add("animacao");
+            }, 4500);
         }
         derrota++
         document.getElementById("tentativas").innerText = derrota
@@ -416,12 +494,18 @@
     }
 
     function menupause() {
+        if (isMobile()) {
+            apareceu()
+        }
         if (pause == 0) {
             document.getElementById("pause").style.display = "block"
             document.getElementById("escolha").disabled = true
             document.getElementById("botaodomenu").style.cursor = "default"
-            document.getElementById("botaodomenu").setAttribute( "onClick", "a" );
+            document.getElementById("botaodomenu").setAttribute( "onClick", "" );
             document.getElementById("div").style.display = "none"
+            if (quadrado == 0 && document.getElementById("myModal").style.display == "block") {
+                descerquadrado()
+            }
             pause++
         } else {
             document.getElementById("pause").style.display = "none"
@@ -445,19 +529,26 @@
 
     function apareceu() {
         if (awsd == 0) {
-            document.getElementById("divdasfields").classList.add("animation")
-            document.getElementById("divdasfields").classList.remove("animation2")
-            awsd++
-        } else {
             document.getElementById("divdasfields").classList.add("animation2")
             document.getElementById("divdasfields").classList.remove("animation")
+            awsd++
+        } else {
+            document.getElementById("divdasfields").classList.add("animation")
+            document.getElementById("divdasfields").classList.remove("animation2")
             awsd--
         }
     }
    
     function mudancas() {
         if (isMobile()) {
+            numeroquadrado = 4
+            numeroquadradodois = 5
+            document.getElementById("separamento2").style.marginTop = "120px"
+            document.getElementById("gugugu").style.marginTop = "-30px"
+            //document.getElementById("gugugu").setAttribute( "onClick", "mensagemCopiada2()" );
             document.getElementById("divdasfields").setAttribute( "onClick", "apareceu()" );
+            //document.getElementById("divdasfields").style.marginLeft = "-260px"
+            document.getElementById("plaquinha").style.marginTop = "128%"
             document.getElementById("botaodomenu").style.marginLeft = "750px"
             document.getElementById("pause").style.marginLeft = "-75px"
             document.getElementById("div").style.marginLeft = "265px"
@@ -467,52 +558,150 @@
         }
     }
 
+    var countDownDate = new Date()
+    countDownDate.setDate(countDownDate.getDate() + 1)
+    countDownDate.setHours(countDownDate.getHours() - countDownDate.getHours())
+    countDownDate.setMinutes(countDownDate.getMinutes() - countDownDate.getMinutes())
+    countDownDate.setSeconds(countDownDate.getSeconds() - countDownDate.getSeconds())
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+    
+  var distance = countDownDate - now;
+    
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  document.getElementById("timer").innerHTML = hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "0h 0m 0s";
+  }
+}, 1000)
+
+function compartilharMensagem() {
+    var mensagemcopiada = "oi"
+    if (vitoria == 1) {
+        mensagemcopiada = "I won the Today's Pvzdle! Yay!!" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\n Play Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
+    } else {
+        mensagemcopiada = "I lost 😕😕" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\n Play Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
+    }
+    navigator.clipboard.writeText(mensagemcopiada)
+    document.getElementById("mensagemcopiadaaviso").classList.add("animacao")
+    setTimeout(function () {
+        document.getElementById("mensagemcopiadaaviso").classList.remove("animacao")
+    }, 5000)
+}
+
+function compartilharMensagem2() {
+    var mensagemcopiada = "oi"
+    if (vitoria == 1) {
+        mensagemcopiada = "I won the Today's Pvzdle! Yay!!" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\n Play Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
+    } else {
+        mensagemcopiada = "I lost 😕😕" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\n Play Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
+    }
+    if (navigator.share) {
+        navigator.share({
+            title: "PvzDle!!",
+            text: mensagemcopiada,
+            url: "https://kirbtop.github.io/PvzDle/"
+        })
+        .catch((error) => console.error("Error:", error));
+        document.getElementById("mensagemcopiadaaviso").classList.add("animacao")
+            setTimeout(function () {
+                    document.getElementById("mensagemcopiadaaviso").classList.remove("animacao")
+            }, 5000)
+    } else {
+        alert("Yout browser doesn't share.");
+    }
+}
+
+function NAOVAIJOGARNAO() {
+    let jajogouhj = getStreak("Planta1");
+    if (jajogouhj !== "") {
+        document.getElementById('escolha').disabled = true
+        document.getElementById("botaodomenu").setAttribute( "onClick", "" );
+    } else {
+        document.getElementById('escolha').disabled = false
+        document.getElementById("botaodomenu").style.cursor = "pointer"
+        document.getElementById("botaodomenu").setAttribute( "onClick", "menupause()" );
+    }
+}
+
+function descerquadrado() {
+    document.getElementsByClassName("modal-content")[0].classList.remove("animacao");
+    if (quadrado == 0){
+        document.getElementsByClassName("modal-content")[0].classList.remove("animacao"+numeroquadradodois);
+        document.getElementsByClassName("modal-content")[0].classList.add("animacao"+numeroquadrado);
+        document.getElementById("botaodomenu").style.cursor = "pointer"
+        document.getElementById("botaodomenu").setAttribute( "onClick", "menupause()" );
+        document.getElementsByClassName("modal-content")[0].style.background = "url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar.png?alt=media&token=d7a66250-fecb-49fc-8b2f-a54bb6353a51')"
+        quadrado++
+    } else {
+        document.getElementsByClassName("modal-content")[0].classList.remove("animacao"+numeroquadrado);
+        document.getElementsByClassName("modal-content")[0].classList.add("animacao"+numeroquadradodois);
+        document.getElementsByClassName("modal-content")[0].style.background = "url('https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar2.png?alt=media&token=bda45814-5e71-4dbe-9168-795799059a35')"
+        if (pause == 1) {
+            menupause()
+        }
+        quadrado--
+    }
+}
+
     </script>
-        <BODY onload="verfundo()">
+        <BODY onload="verfundo(); NAOVAIJOGARNAO()">
+            <img id="plaquinha" onclick="window.open('news.HTML')" style="margin-top: 39%; position: fixed; cursor: pointer" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplaquinha.png?alt=media&token=605035ac-c340-4ae6-9783-0921d20967e7">
             <img id="fundinho" class="fundo" src="">
-            <div id="pause">
+            <div id="pause" style="margin-left: auto; margin-right: auto">
                 <img class="icon" onclick="fundo1()" style="cursor: pointer; margin-left: 70px" height="50px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2FSunny_Days.webp?alt=media&token=70d60ef2-9419-4d01-bcd9-8cc3f6a01d50">
                 <img class="icon" onclick="fundo2()" style="cursor: pointer" height="50px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2FSeeing_stars.webp?alt=media&token=8a97af2f-9dde-49fa-81e2-1c1b7847db8b">
-                <img class="icon" onclick="fundo3()" style="cursor: pointer" height="50px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2FDon't_Pea_in_the_Pool.webp?alt=media&token=6d0c3cc2-5a00-4e28-bc82-75c4c0c41300">
+                <img class="icon" onclick="fundo3()" style="cursor: pointer" height="50px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2FDon't_Pea_in_the_Pool2.webp?alt=media&token=bda51836-cfa4-46ae-a47c-24d6b15dc39c">
                 <img class="icon" onclick="fundo4()" style="cursor: pointer" height="50px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2FNewblindfaith.webp?alt=media&token=75504834-7b60-4088-a1e6-b73e92bec55e">
                 <img class="icon" onclick="fundo5()" style="cursor: pointer" height="50px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2FNew_grounded_icon.webp?alt=media&token=53860532-2f5e-4384-b880-7f02c9f184e8">    
                 <a style="font-family: PvZFont; margin-left: -250px; margin-top: 190px; z-index: 10000; position: fixed; font-size: 30px; color: #626284;"> Music: <br><img id="coisadesom" onclick="musiquinha()" style="cursor: pointer; margin-left: 90px; margin-top: -75px" height="50" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2FPhonograph.png?alt=media&token=567541c3-bb77-4425-9fce-c8a23aecddd4"></a>
                 <img style="margin-left: -254px; margin-top: 250px; cursor: pointer; position: fixed; height: 65px; z-index: 10000" onclick="window.open('tutorial.HTML')" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2Fhow_button.png?alt=media&token=71d84f52-9144-40a7-88f2-a225afa8ac00">
                 <img style="margin-left: -254px; margin-top: 300px; cursor: pointer; position: fixed; height: 65px; z-index: 10000" onclick="window.open('credits.HTML')" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2Fcredits_button.png?alt=media&token=2ebe695c-50b3-493f-95f2-bf90332da539">
                 <img style="margin-left: -285px; margin-top: 390px; cursor: pointer; position: fixed; height: 85px; z-index: 10000" onclick="menupause()" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2Foptions_backtogamebutton1.png?alt=media&token=eace9dd5-08ea-448d-b4f9-9288da7ab3a5">
-                <img class="menu" style="margin-left: -345px;" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2Fmenu.png?alt=media&token=d32e4de8-2df7-45bd-afa5-b56a3426f821">
+                <img class="menu" id="fundomenu" style="margin-left: -345px;" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FBackground%20Icon%2Fmenu.png?alt=media&token=d32e4de8-2df7-45bd-afa5-b56a3426f821">
             </div>
             <img id="fundo2" class="fundo2" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fpartedecima.png?alt=media&token=a5011f1c-e193-4ea9-a75e-598682bd5caf">
             <div id="naoseinomeparabotarnestadiv" style="font-family: PvZFont;">
-            <a style="margin-left: 30px">Images</a> and info. from the <a href="https://plantsvszombies.fandom.com/wiki/Plants_vs._Zombies">Game's Wikipedia</a>.
+            <a style="margin-left: 30px">Images</a> and info. from the <a href="https://plantsvszombies.fandom.com/wiki/Plants_vs._Zombies" target="_blank">Game's Wikipedia</a>.
             <img height="50px" class="center" style="width: 100%; max-width: 50px;" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00">
             <img height="50px" class="right" id="botaodomenu" onclick="menupause()" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fmenu_button.png?alt=media&token=080087e3-b517-4e88-9e16-2ca5fc70fd79">
             <div style="text-align: center;">
             Guess today's plant!
             <br>
-            <input id="escolha" oninput="ver()" style="font-family: Arial, Helvetica, sans-serif !important;">
+            <input id="escolha" oninput="ver()" style="font-family: Arial, Helvetica, sans-serif !important; font-size: 20px;">
             <br>
             <div id="lalalali">
-            <a id="mensagem">Guesses <a id="tentativas">0</a><a id="some">/6</a></a>
+            <a id="mensagem">Guesses <a id="tentativas">0</a><a id="some">/<a id="numerodetentativas">0</a></a></a>
             </div></div></div>
-            <div class="divdasfields" id="divdasfields" style="position: absolute; margin-top: 20px; z-index: 999999; width: 300px; height: 200px">
+            <div class="divdasfields" id="divdasfields" style="position: absolute; margin-top: 20px; z-index: 999999; width: 300px; height: 250px">
                 <fieldset style="margin-left: 45px; color: #bd7d26;">
-                    <img style="position: relative; margin-top: 62px" height="35px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FTrophy2.webp?alt=media&token=abf61411-1ddb-4bcd-b420-d87de2e0f6dd">
+                    <img style="position: relative; margin-top: 58px" height="45px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Ftrofeuverde.webp?alt=media&token=bbbc8267-e79a-4919-bd97-9d4260d82f85">
                     <br>
-                    <img style="position: relative; margin-top: 30px; margin-left: 5px" height="25px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FDiamond2.webp?alt=media&token=03dbb033-9e78-4e88-91e7-dd1fdac1aa49">
+                    <img style="position: relative; margin-top: 20px" height="35px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FTrophy2.webp?alt=media&token=abf61411-1ddb-4bcd-b420-d87de2e0f6dd">
+                    <br>
+                    <img style="position: relative; margin-top: 25px; margin-left: 5px" height="25px" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FDiamond2.webp?alt=media&token=03dbb033-9e78-4e88-91e7-dd1fdac1aa49">
                 </fieldset>
                 <fieldset style="color: #bd7d26; font-size: 22px">
-                    <p style="display: inline-block; margin-top: 65px; text-align: center; width: 61px; font-family: PvZFont;">Streak:<a id="Streakdapessoa" style="margin-left: 10px">0</p></a>
-                    <p style="text-align: center; margin-top: 10px; width: 50px; font-family: PvZFont;">Wins:<a id="Vitoriasdapessoa" style="margin-left: 10px">0</a></p>
+                    <p style="display: inline-block; margin-top: 65px; font-family: PvZFont;">Best Streak:<a id="Streakdapessoa" style="margin-left: 10px">0</p></a>
+                    <p style="text-align: center; margin-top: 10px;width: 5px; font-family: PvZFont;">Streak:<a id="Streakatualdapessoa" style="margin-left: 10px">0</p></a>
+                    <p style="text-align: center; margin-top: 22.5px; width: 5px; font-family: PvZFont;">Wins:<a id="Vitoriasdapessoa" style="margin-left: 10px">0</a></p>
                 </fieldset>
             </div>
-            <div id="div" style="display: none; position: absolute; z-index: 9999; margin-left: 35%;margin-top: 1%; font-family: PvZFont; font-size: 20px;">    
-            <img src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Feverthing.png?alt=media&token=e49f3678-cc82-4fea-aa7e-30c278ed4656">
+            <div id="div" style="display: none; position: absolute; margin-left: 38.5%; margin-top: 1%; z-index: 9999; font-family: PvZFont; font-size: 20px;">    
+                <img src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Feverthingdnv.png?alt=media&token=a1d306d7-5c88-4b98-9cb0-8a1ecffc9a4c">
             <br>
             </div>
             <br><br>
-            <div id="vitoria" style="text-align: center;">
-                <img id="naoseiqualnomedar" width="680px" style="margin-left: 87px; opacity: 0" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Feverthing2.png?alt=media&token=bece8a6c-2786-41cb-89ca-7ccc0fa8a6dc">
+            <div id="vitoria" style="text-align: center; margin-left: 11px">
+                <img id="naoseiqualnomedar" width="535px" style="margin-left: auto; margin-right: auto; opacity: 0" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Feverthing2dnv.png?alt=media&token=3f60eb30-5ebc-4434-93b8-38c5b919a60b">
             </div>
             <div id="yayay6" style="position: relative; text-align: center;"></div>
             <div id="yayay5" style="position: relative; text-align: center;"></div>
@@ -520,5 +709,26 @@
             <div id="yayay3" style="position: relative; text-align: center;"></div>
             <div id="yayay2" style="position: relative; text-align: center;"></div>
             <div id="yayay1" style="position: relative; text-align: center;"></div>
+            <div id="myModal" class="modal" style="z-index: 99999; overflow: hidden; font-family: 'PvZFont'; pointer-events: none;">
+                <div class="modal-content" style="z-index: 99999; text-align: center;">
+                    <button id="butao" onclick="descerquadrado()" class="close" style="opacity: 0">-----------</button>
+                    <div id="separamento" style="font-size: large; height: 190px; align-items: center; justify-content: center;">
+                        <a id="compartilharmensagem6" style="margin-top: -10x"></a>
+                        <a id="compartilharmensagem5" style="margin-top: -10x"></a>
+                        <a id="compartilharmensagem4" style="margin-top: -10x"></a>
+                        <a id="compartilharmensagem3" style="margin-top: -10x"></a>
+                        <a id="compartilharmensagem2" style="margin-top: -10x"></a>
+                        <a id="compartilharmensagem1" style="margin-top: -10x"></a>
+                    </div>
+                    <br>
+                    <div id="separamento2" style="font-size: 45px; height: 140px;">
+                        <a style="font-size: small;">next plant in:</a>
+                        <p id="timer" style="margin-top: -30px;"></p>
+                    </div>
+                    <br><br>
+                    <img id="gugugu" onclick="compartilharMensagem()" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FSHAREBUTOON.png?alt=media&token=e63ed0f3-cbc7-4ed2-89a3-87eb36febb14" height="39px" width="166.5px" style="cursor: pointer; margin-left: 25%; margin-right: 75%;">
+                    <p id="mensagemcopiadaaviso" style="opacity: 0" class="mensagemlalala">message copied to clipboard!</p>
+                </div>
+            </div>
         </BODY>
     </HTML>

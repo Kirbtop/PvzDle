@@ -6,13 +6,14 @@ var solsolsol = 1
 var soissoissois = 1
 var lalalala = 1
 var yipe = 1
+var talaounaota = 1
     function criar(numero6) {
         vitoria = 1
         document.getElementById("escolha").value = "";
         document.getElementById("div").style.display = "none";
         document.getElementById("escolha").disabled = true;
         document.getElementById("botaodomenu").style.cursor = "default"
-        document.getElementById("botaodomenu").setAttribute( "onClick", "a" );
+        document.getElementById("botaodomenu").setAttribute( "onClick", "" );
         document.getElementById("pause").style.display = "none"
         var SolEscolhido, UpgradeEscolhido, MundoEscolhido, AreaEscolhido, DanoEscolhido, CarregamentoEscolhido, specialEscolhido, Ganhou, Perdeu = ""
         var dbRef3 = firebase.database().ref().child('Plantas/PvZ1/'+numero6)
@@ -29,14 +30,19 @@ var yipe = 1
             Ganhou = snapshot.val().Won; 
             Perdeu = snapshot.val().Wrong; 
         });
+        var certoouerrado = ""
+        var solcertoouerrado = ""
         if (SolEscolhido !== SolDoDia) {
             errou(numero6)
+            solcertoouerrado = solcertoouerrado + "🟥"
             corSol = "#dc3545"
         } else {
+            solcertoouerrado = solcertoouerrado + "🟩"
             corSol = "#198754"
         }
         if (MundoEscolhido !== MundoDoDia) {
             errou(numero6)
+            certoouerrado = certoouerrado + "🟥"
             if (MundoEscolhido == "Day") {
                 Mundao = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FWorld%2FWorldDayWrong.webp?alt=media&token=9b242bfe-64d0-44c0-be04-62fa1f492c89"
             } else if (MundoEscolhido == "Night") {
@@ -51,6 +57,7 @@ var yipe = 1
                 Mundao = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FWorld%2FWorldShopWrong.webp?alt=media&token=ab5158f3-6c8a-470e-8142-2d5704af8bf8"
             }
         } else {
+            certoouerrado = certoouerrado + "🟩"
             if (MundoEscolhido == "Day") {
                 Mundao = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FWorld%2FWorldDay.webp?alt=media&token=e0391096-8200-437f-b5f7-ab2184397f17"
             } else if (MundoEscolhido == "Night") {
@@ -67,6 +74,7 @@ var yipe = 1
         }
         if (CarregamentoEscolhido !== CarregamentoDoDia) {
             errou(numero6)
+            certoouerrado = certoouerrado + "🟥"
             if (CarregamentoEscolhido == "Fast") {
                 carregou = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FRecharge%2FFastWrong.webp?alt=media&token=81255010-1c71-4cd2-bbc3-d7cafb6bfe8d"
             } else if (CarregamentoEscolhido == "Slow") {
@@ -77,6 +85,7 @@ var yipe = 1
                 carregou = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FAhnWrong.webp?alt=media&token=6b2cd217-f5db-4dc4-88e4-4fcd5ef7ccdb"
             }
         } else {
+            certoouerrado = certoouerrado + "🟩"
             if (CarregamentoEscolhido == "Fast") {
                 carregou = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FRecharge%2FFast.webp?alt=media&token=a71435af-21d4-4ad8-ba1d-39528f035ea7"
             } else if (CarregamentoEscolhido == "Slow") {
@@ -89,6 +98,7 @@ var yipe = 1
         }
         if (AreaEscolhido !== AreaDoDia) {
             errou(numero6)
+            certoouerrado = certoouerrado + "🟥"
             if (AreaEscolhido == "3x3") {
                 Areazinha = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FRange%2F3x3Wrong.webp?alt=media&token=1404441e-1bc2-439a-9c96-bcf90a902733"
             } else if (AreaEscolhido == "All board") {
@@ -109,6 +119,7 @@ var yipe = 1
                 Areazinha = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FAhnWrong.webp?alt=media&token=6b2cd217-f5db-4dc4-88e4-4fcd5ef7ccdb"
             }
         } else {
+            certoouerrado = certoouerrado + "🟩"
             if (AreaEscolhido == "3x3") {
                 Areazinha = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FRange%2F3x3.webp?alt=media&token=55522331-f37d-4fc5-8259-5f7565e5f24d"
             } else if (AreaEscolhido == "All board") {
@@ -131,6 +142,7 @@ var yipe = 1
         }
         if (DanoEscolhido !== DanoDoDia) {
             errou(numero6)
+            certoouerrado = certoouerrado + "🟥"
             if (DanoEscolhido == "Heavy") {
                 Doeu = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FDamage%2FDamageHeavyWrong.webp?alt=media&token=aba1ba5c-42c1-4cb9-93ca-6fcb8b66aac5"
             } else if (DanoEscolhido == "Massive") {
@@ -147,6 +159,7 @@ var yipe = 1
                 Doeu = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FAhnWrong.webp?alt=media&token=6b2cd217-f5db-4dc4-88e4-4fcd5ef7ccdb"
             }
         } else {
+            certoouerrado = certoouerrado + "🟩"
             if (DanoEscolhido == "Heavy") {
                 Doeu = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FDamage%2FDamageHeavy.webp?alt=media&token=cbad65e6-0449-4537-a68a-5239ad2bfb76"
             } else if (DanoEscolhido == "Massive") {
@@ -165,6 +178,7 @@ var yipe = 1
         }
         if (specialEscolhido !== specialDoDia) {
             errou(numero6)
+            certoouerrado = certoouerrado + "🟥"
             if (specialEscolhido == "No") {
                 Legal = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FNoWrong.webp?alt=media&token=e2237747-9b69-4e41-99a1-06ec108b72b1"
             } else if (specialEscolhido == "Yes") {
@@ -173,6 +187,7 @@ var yipe = 1
                 Legal = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FAhnWrong.webp?alt=media&token=6b2cd217-f5db-4dc4-88e4-4fcd5ef7ccdb"
             }
         } else {
+            certoouerrado = certoouerrado + "🟩"
             if (specialEscolhido == "No") {
                 Legal = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FNo.webp?alt=media&token=77fa74ef-7de8-4d0b-8a9b-962ba974552b"
             } else if (specialEscolhido == "Yes") {
@@ -181,25 +196,26 @@ var yipe = 1
                 Legal = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FAhn.webp?alt=media&token=743ac293-e943-4483-b78f-80ea536583fd"
             }
         }
-        if (UpgradeEscolhido !== UpgradeDoDia) {
-            errou(numero6)
-            if (UpgradeEscolhido == "No") {
-                Upou = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FNoWrong.webp?alt=media&token=e2237747-9b69-4e41-99a1-06ec108b72b1"
-            } else {
-                Upou = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FUpgradeWrong.webp?alt=media&token=a4fbcca8-69d0-4042-9aa1-bf9363a07b56"
-            }
+        if (talaounaota == 1) {
+            emojinumero = "\n1️⃣"
+        } else if (talaounaota == 2) {
+            emojinumero = "\n2️⃣"
+        } else if (talaounaota == 3) {
+            emojinumero = "\n3️⃣"
+        } else if (talaounaota == 4) {
+            emojinumero = "\n4️⃣"
+        } else if (talaounaota == 5) {
+            emojinumero = "\n5️⃣"
         } else {
-            if (UpgradeEscolhido == "No") {
-                Upou = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FNo.webp?alt=media&token=77fa74ef-7de8-4d0b-8a9b-962ba974552b"
-            } else {
-                Upou = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FPacket%20Seeds%2FOther%2FUpgrade.webp?alt=media&token=edffdeba-299b-4dec-95a4-1a4b085c01df"
-            }     
+            emojinumero = "\n6️⃣"
         }
         if (vitoria <= 0) {
+            document.getElementById("compartilharmensagem"+talaounaota).innerText = emojinumero + solcertoouerrado + "🟥" + certoouerrado
            ImagemDaPlanta = Perdeu
         } else {
             ImagemDaPlanta = Ganhou
         }
+        talaounaota++
         var solquant  = document.createElement("a")
         solquant.id = "solquantidade"+soissoissois
         soissoissois++
@@ -207,11 +223,11 @@ var yipe = 1
         solquant.innerText = SolEscolhido
         document.getElementById("yayay"+yipe).appendChild(solquant);
         var semente  = document.createElement("img")
-        semente.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/Seed_Slots2.png?alt=media&token=7104eeba-2370-4f0c-838a-2423181334dc"
+        semente.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FSeed_Slots2dnv.png?alt=media&token=6056ca44-9650-4fbf-8fd8-50f2f78fcea4"
         semente.width = "680"
         semente.height = "115.8"
         semente.classList = "img-fluid"
-        semente.style = "margin-top: 2px"
+        semente.style = "margin-top: 2px;"
         document.getElementById("yayay"+yipe).appendChild(semente);
         var sol  = document.createElement("img")
         sol.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/1eda2dd3572c11df08299c94742762d0f603c295.gif?alt=media&token=6686f86d-67b1-4249-a5c0-8a07eda07378"
@@ -268,14 +284,6 @@ var yipe = 1
         pacote6.id = "pacote"+pacoteNumero
         pacoteNumero++
         document.getElementById("yayay"+yipe).appendChild(pacote6);
-        var pacote7  = document.createElement("img")
-        pacote7.src = Upou
-        pacote7.style = "margin-left: 5px; position: relative"
-        pacote7.classList = "pacote"
-        pacote7.width = "65"
-        pacote7.id = "pacote"+pacoteNumero
-        pacoteNumero++
-        document.getElementById("yayay"+yipe).appendChild(pacote7);
         document.getElementById("yayay"+yipe).appendChild(document.createElement("br"));
         yipe++
     }
@@ -335,12 +343,8 @@ var yipe = 1
             lalalala++
         }, 3000);
         setTimeout(function () { 
-            document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);
-            lalalala++
-        }, 3500);
-        setTimeout(function () { 
             document.getElementById("sois"+solsolsol).classList.add("animation"+solsolsol);
-        }, 4000);
+        }, 3500);
         setTimeout(function () { 
             document.getElementById("escolha").disabled = false;
             document.getElementById("botaodomenu").style.cursor = "pointer"
@@ -355,5 +359,5 @@ var yipe = 1
             document.getElementById("solquantidade4").style.opacity = "1";
             document.getElementById("solquantidade5").style.opacity = "1";
             document.getElementById("solquantidade6").style.opacity = "1";
-        }, 4500);
+        }, 4000);
     }

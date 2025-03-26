@@ -1,32 +1,34 @@
 function setWin() {
-  const date = new Date();
   const datee = new Date();
-  date.setDate(date.getDate() + 2);
-  date.setHours(0, 0, 0, 0);
-  datee.setDate(datee.getDate() + 1);
-  datee.setHours(0, 0, 0, 0);
-  document.cookie = `Streak=1; expires=${date.toUTCString()}; path=/; Secure; SameSite=Lax;`;   
-  document.cookie = `JaGanhou=1; expires=${datee.toUTCString()}; path=/; Secure; SameSite=Lax;`;   
   let vitoria = getStreak("Vitorias");
   if (vitoria == "") {
       vitoria = 0
   }
   vitoria = parseInt(vitoria) + 1
-  document.cookie = `Vitorias=`+vitoria+`; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;    
-}
-
-function updateWin(streakk) {
-  const date = new Date();
-  const datee = new Date();
-  date.setDate(date.getDate() + 2);
-  date.setHours(0, 0, 0, 0);
+  document.cookie = `Vitorias=`+vitoria+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;  
   datee.setDate(datee.getDate() + 1);
   datee.setHours(0, 0, 0, 0);
-  document.cookie = `Streak=`+streakk+`; expires=${date.toUTCString()} path=/;Secure; SameSite=Lax;`;
+  document.cookie = `StreakAtual=1; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;
+  document.cookie = `JaGanhou=1; expires=${datee.toUTCString()}; path=/; Secure; SameSite=Lax;`;  
+  updatestreak()   
+}
+function updatestreak() {
+  let streak = getStreak("Streak");
+  let streakAtual = getStreak("StreakAtual");
+  if (streakAtual > streak) {
+    document.cookie = `Streak=`+streakAtual+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;
+  }
+}
+function updateWin(streakkk) {
+  const datee = new Date();
+  datee.setDate(datee.getDate() + 1);
+  datee.setHours(0, 0, 0, 0);
+  document.cookie = `StreakAtual=`+streakkk+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;
   document.cookie = `JaGanhou=1; expires=${datee.toUTCString()}; path=/; Secure; SameSite=Lax;`;   
+  updatestreak()
   let vitoria = getStreak("Vitorias");
   vitoria = parseInt(vitoria) + 1
-  document.cookie = `Vitorias=`+vitoria+`; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;  
+  document.cookie = `Vitorias=`+vitoria+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;  
 }
 
 function getStreak(cstreak) {
@@ -46,6 +48,7 @@ function getStreak(cstreak) {
 
 function winStreak() {
       let streak = getStreak("Streak");
+      let streakk = getStreak("StreakAtual");
       let jaganhou = getStreak("JaGanhou");
       if (jaganhou == "") {
           jaganhou = 0
@@ -54,8 +57,8 @@ function winStreak() {
           if (streak == "") {
               setWin();    
           } else {
-              let intStreak = parseInt(streak) + 1
-              updateWin(intStreak);
+              let intStreakk = parseInt(streakk) + 1
+              updateWin(intStreakk);
           }
       }
       setTimeout(function () { 
@@ -64,20 +67,29 @@ function winStreak() {
     }
 
 function lostStreak() {
-  document.cookie = `Streak=0; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax`;
-  document.getElementById("Streakdapessoa").innerText = "0"
+  let streakatual = getStreak("StreakAtual");
+  const date = new Date();
+  date.setDate(date.getDate() + 1);
+  date.setHours(0, 0, 0, 0);
+  document.cookie = `StreakAtual=`+streakatual+`; expires=expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax`;
+  document.getElementById("Streakatualdapessoa").innerText = "0"
 }
 
 function vitoriasestreaks() {
   let vitoriasdapessoa = getStreak("Vitorias");
   let streaksdapessoa = getStreak("Streak");
+  let streaksatualdapessoa = getStreak("StreakAtual");
   if (streaksdapessoa == "") {
     streaksdapessoa = 0
   }
   if (vitoriasdapessoa == "") {
     vitoriasdapessoa = 0
   }
+  if (streaksatualdapessoa == "") {
+    streaksatualdapessoa = 0
+  }
   document.getElementById("Streakdapessoa").innerText = streaksdapessoa
+  document.getElementById("Streakatualdapessoa").innerText = streaksatualdapessoa
   document.getElementById("Vitoriasdapessoa").innerText = vitoriasdapessoa
 }
 
@@ -117,7 +129,7 @@ function trofeeu() {
     let premio = getStreak("Premio");
     if (premio == "") {
       premio = 0
-      document.cookie = `Premio=0; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
+      document.cookie = `Premio=0; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
     }
     if (premio == 3) {
       trofeu = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTrophy%2Fplantsvsmaple_bluesunflower.png?alt=media&token=675ed7b1-accd-49fe-8084-8235d761d11e"
@@ -138,30 +150,30 @@ function trofeeu() {
 }
 
 function trofeeeu() {
-  let vitorias = getStreak("Vitorias");
+  let vitoriass = getStreak("Vitorias");
   let premio = getStreak("Premio");
   if (premio == "") {
       premio = 0
-      document.cookie = `Premio=0; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
+      document.cookie = `Premio=0; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
     }
-  if ((vitorias == 49) && (premio == 0)) {
-      document.cookie = `Premio=1; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
+  if ((vitoriass == 49) && (premio == 0)) {
+      document.cookie = `Premio=1; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
       const audio = document.getElementById('audioPlayer');
       audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FTrofeu.m4a?alt=media&token=9a0c8a69-d620-4b1d-9b86-2e3bf11e0c52"
       setTimeout(function () { 
           document.getElementById("mensagem").innerText = "Woah! You got the Silver Sunflower Trophy for getting 50 victories! Congratulations!!"
       }, 500)
       trofeeu()
-  } else if ((vitorias == 99) && (premio == 1)) {
-      document.cookie = `Premio=2; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
+  } else if ((vitoriass == 99) && (premio == 1)) {
+      document.cookie = `Premio=2; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
       const audio = document.getElementById('audioPlayer');
       audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FTrofeu.m4a?alt=media&token=9a0c8a69-d620-4b1d-9b86-2e3bf11e0c52"
       setTimeout(function () { 
         document.getElementById("mensagem").innerText = "Wooow! You got the Gold Sunflower Trophy for getting 100 victories! Well done!!"
       }, 500)
       trofeeu()
-  } else if ((vitorias == 364) && (premio == 2)) {
-      document.cookie = `Premio=3; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
+  } else if ((vitoriass == 364) && (premio == 2)) {
+      document.cookie = `Premio=3; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
       const audio = document.getElementById('audioPlayer');
       audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FTrofeu.m4a?alt=media&token=9a0c8a69-d620-4b1d-9b86-2e3bf11e0c52"
       setTimeout(function () { 
@@ -181,5 +193,5 @@ function gravar(numero7) {
 }
 
 function gravarfundo(numerodofundo) {
-  document.cookie = `Fundo=`+numerodofundo+`; expires=Thu, 01 Jan 3000 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;    
+  document.cookie = `Fundo=`+numerodofundo+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;    
 }

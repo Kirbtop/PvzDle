@@ -545,9 +545,7 @@
             numeroquadradodois = 5
             document.getElementById("separamento2").style.marginTop = "120px"
             document.getElementById("gugugu").style.marginTop = "-30px"
-            //document.getElementById("gugugu").setAttribute( "onClick", "mensagemCopiada2()" );
-            document.getElementById("divdasfields").setAttribute( "onClick", "apareceu()" );
-            //document.getElementById("divdasfields").style.marginLeft = "-260px"
+            document.getElementById("divdasfields").style.marginLeft = "-280px"
             document.getElementById("plaquinha").style.marginTop = "128%"
             document.getElementById("botaodomenu").style.marginLeft = "750px"
             document.getElementById("pause").style.marginLeft = "-75px"
@@ -595,29 +593,6 @@ function compartilharMensagem() {
     setTimeout(function () {
         document.getElementById("mensagemcopiadaaviso").classList.remove("animacao")
     }, 5000)
-}
-
-function compartilharMensagem2() {
-    var mensagemcopiada = "oi"
-    if (vitoria == 1) {
-        mensagemcopiada = "I won the Today's Pvzdle! Yay!!" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\n Play Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
-    } else {
-        mensagemcopiada = "I lost 😕😕" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\n Play Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
-    }
-    if (navigator.share) {
-        navigator.share({
-            title: "PvzDle!!",
-            text: mensagemcopiada,
-            url: "https://kirbtop.github.io/PvzDle/"
-        })
-        .catch((error) => console.error("Error:", error));
-        document.getElementById("mensagemcopiadaaviso").classList.add("animacao")
-            setTimeout(function () {
-                    document.getElementById("mensagemcopiadaaviso").classList.remove("animacao")
-            }, 5000)
-    } else {
-        alert("Yout browser doesn't share.");
-    }
 }
 
 function NAOVAIJOGARNAO() {

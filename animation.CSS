@@ -6,22 +6,22 @@
         opacity: 0;
         position: relative
     }
-    #pacote1, #pacote2, #pacote3, #pacote4, #pacote5, #pacote6, #pacote7 {
+    #pacote1, #pacote2, #pacote3, #pacote4, #pacote5, #pacote6 {
         z-index: 9990
     }
-    #pacote8, #pacote9, #pacote10, #pacote11, #pacote12, #pacote13, #pacote14 {
+    #pacote7, #pacote8, #pacote9, #pacote10, #pacote11, #pacote12 {
         z-index: 9991
     }
-    #pacote15, #pacote16, #pacote17, #pacote18, #pacote19, #pacote20, #pacote21 {
+    #pacote13, #pacote14, #pacote15, #pacote16, #pacote17, #pacote18 {
         z-index: 9992
     }
-    #pacote22, #pacote23, #pacote24, #pacote25, #pacote26, #pacote27, #pacote28 {
+    #pacote19, #pacote20, #pacote21, #pacote22, #pacote23, #pacote24 {
         z-index: 9993
     }
-    #pacote29, #pacote30, #pacote31, #pacote32, #pacote33, #pacote34, #pacote35 {
+    #pacote25, #pacote26, #pacote27, #pacote28, #pacote29, #pacote30 {
         z-index: 9994
     }
-    #pacote36, #pacote37, #pacote38, #pacote39, #pacote40, #pacote41, #pacote42 {
+    #pacote31, #pacote32, #pacote33, #pacote34, #pacote35, #pacote26 {
         z-index: 9995
     }
     .pacote.animation, .pacote.animation8, .pacote.animation15, .pacote.animation22, .pacote.animation29, .pacote.animation36 {

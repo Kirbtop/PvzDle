@@ -15,7 +15,7 @@ function setWin() {
 function updatestreak() {
   let streak = getStreak("Streak");
   let streakAtual = getStreak("StreakAtual");
-  if (streakAtual > streak) {
+  if (streak < streakAtual) {
     document.cookie = `Streak=`+streakAtual+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;
   }
 }

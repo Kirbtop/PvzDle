@@ -154,11 +154,6 @@
     var lalelilu = 0
   } 
 
-  let streak = getStreak("Streak");
-  if (streaksatuaisdapessoa == "") {
-    document.cookie = `StreakAtual=`+streak+`; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`;
-  }
-
         document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("numerodetentativas").innerText = qnttentativas - lalelilu
         document.getElementById("escolha").value = ""

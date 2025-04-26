@@ -73,7 +73,7 @@ function lostStreak() {
   const date = new Date();
   date.setDate(date.getDate() + 1);
   date.setHours(0, 0, 0, 0);
-  document.cookie = `StreakAtual=`+streakatual+`; expires=expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax`;
+  document.cookie = `StreakAtual=`+streakatual+`; expires=${date.toUTCString()}; path=/; Secure; SameSite=Lax`;
   document.getElementById("Streakatualdapessoa").innerText = "0"
 }
 

@@ -56,7 +56,7 @@ function winStreak() {
           jaganhou = 0
       }
       if (jaganhou == 0) {
-          if (streak == "") {
+          if (streakk == "") {
               setWin();    
           } else {
               let intStreakk = parseInt(streakk) + 1

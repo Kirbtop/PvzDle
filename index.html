@@ -263,14 +263,11 @@
 
     while (PlantaDoDia > totalplantas - 1) {
         PlantaDoDia = PlantaDoDia - ((mes * semana) + (dia + semana) + 1)
-        if (PlantaDoDia <= 0) {
+        if (PlantaDoDia < 0) {
             PlantaDoDia = PlantaDoDia * (-1)
         }
-        if (PlantaDoDia == 7) {
-            PlantaDoDia = 43
-        }
-        if (PlantaDoDia == 198) {
-            PlantaDoDia = 22
+        if (PlantaDoDia == 72) {
+            PlantaDoDia = 35
         }
     }
 

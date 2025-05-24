@@ -1,153 +1,177 @@
 <!DOCTYPE html>
 <HTML>
-        <HEAD>
-            <title>PvzDle - How to Play</title>
-            <link rel="icon" type="images/png" href="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00"/>
-            <meta charset="UTF-8">
-        </HEAD>
-        <style>
-        @font-face {
-            font-family: 'PvZFont';
-            src: url('SERIO___.TTF');
-        }
-        @font-face {
-            font-family: 'PvZFont2';
-            src: url('Brianne_s_hand.ttf');
-        }
-        body {
-            background-repeat: repeat;
-            background-image: url("https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FAlmanac_GroundDay2.png?alt=media&token=276be062-4335-4006-beee-5ac6a85024b9")
-        }
-        .cartinha {
-            top: 15%;
-            display: block;
-            size: 100%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .fundo {
-            top: 0;
-            left: 0;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            display: none;
-        }
-        .lirvo {
-            z-index: 2; 
-            text-align: center; 
-            position: relative;
-            background-color: #693011;
-            border: 5px;
-            border-radius: 25px;
-            border-color: #a7562b;
-            border-style: solid;
-            box-shadow: 100px;
-            color: #bd7d26;
-            font-size: 15px; 
-            margin: auto;
-            display: none
-        }
-        </style>
-        <script>
-            var numero = 0
 
-            document.addEventListener('DOMContentLoaded', function() {
-            mudancas()
-            })
+<HEAD>
+    <title>PvzDle - How to Play</title>
+    <link rel="icon" type="images/png"
+        href="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00" />
+    <meta charset="UTF-8">
+</HEAD>
+<style>
+    @font-face {
+        font-family: 'PvZFont';
+        src: url('SERIO___.TTF');
+    }
 
-            function mudancas() {
-            if (isMobile()) {
-                document.getElementsByClassName("lirvo")[0].style.marginLeft = "350px" 
-                document.getElementsByClassName("lirvo")[1].style.marginLeft = "100px" 
-                document.getElementsByClassName("lirvo")[2].style.marginLeft = "125px" 
-            }
-            }
-            
-            function isMobile() {
-                const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-                return regex.test(navigator.userAgent);
-            }
+    @font-face {
+        font-family: 'PvZFont2';
+        src: url('Brianne_s_hand.ttf');
+    }
 
-            function tutorial() {
-                if (numero == 0) {
-                    document.getElementById("cartinha").style.display = "none"
-                    document.getElementById("fundinho").style.display = "block"
-                    document.getElementsByClassName("lirvo")[0].style.display = "block"
-                    document.getElementsByClassName("lirvo")[1].style.display = "block"
-                    document.getElementsByClassName("lirvo")[2].style.display = "block"
-                    document.getElementsByClassName("lirvo")[3].style.display = "block"
-                    document.getElementById("a").style.display = "none"
-                    document.getElementById("botao").innerText = "Back"
-                    numero++
-                } else {
-                    document.getElementById("cartinha").style.display = "block"
-                    document.getElementById("fundinho").style.display = "none"
-                    document.getElementsByClassName("lirvo")[0].style.display = "none"
-                    document.getElementsByClassName("lirvo")[1].style.display = "none"
-                    document.getElementsByClassName("lirvo")[2].style.display = "none"
-                    document.getElementsByClassName("lirvo")[3].style.display = "none"
-                    document.getElementById("a").style.display = "block"
-                    document.getElementById("botao").innerText = "Real tutorial"
-                    numero--
-                }
-            }
-            function carregar() {
-                setTimeout(function () { 
-                    document.getElementById("botaodiv").style.display = "block"
-                }, 2500 )
-            }
-        </script>
-        <BODY onload="carregar()"> 
-            <br><br>
-            <img id="cartinha" class="cartinha" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FFake_tutorial.png?alt=media&token=ca34ad08-5c78-4c31-907d-d3c0533c5b45">
-            <img id="fundinho" class="fundo" src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FBackground.png?alt=media&token=675197b6-6aa0-4a8b-8fd2-66a0e54c9ffe">
-            <div class="lirvo" style="font-family: 'PvZFont'; width: 500px">
-                <br>
-                Real tutorial
-                <br><br>
-            </div>
-            <br>
-            <div class="lirvo" style="font-family: 'PvZFont2'; font-size: 20px; width: 1000px;">
-                <br>
-                The goal of the game is to guess today's plant!<br>
-                Each day, a new plant is selected for you to guess. If you guess correctly, your win-streak will grow. However,<br>
-                if you lose a game, your win-streak will reset.<br>
-                Only the 49 plants that are available in regular gameplay are included.<br>
-                Explode-o-nut, Giant Wall-nut, Sprout, and Reverse Repeater are excluded from the selection.<br>
-                You have 6 guesses per day. If you spend all your guesses, you lose.<br><br>
-                What does each seed packet mean?
-                <br><br>
-            </div>
-            <br>
-            <div class="lirvo" style="font-family: 'PvZFont2'; font-size: 20px; width: 950px; text-align: left">
-                <br>
-                <a style="margin-left: 10px;">- Plant: The first one is the plant you chose. It displays its name and image.</a><br><br>
-                <a style="margin-left: 10px;">- World: The second one is the world of the plant. It's the area where you obtain the plant.</a><br><br>
-                <a style="margin-left: 10px;">- Recharge: The third one is the plant's recharge time. It's the amount of time it takes for the plant to be fully</a><br>
-                <a style="margin-left: 22px;">If the plant doesn't do damage, it will display "No" on the seed packet.</a><br><br>
-                <a style="margin-left: 10px;">- The fourth one is the plant's attack range. It's the area where the plant can attack or perform actions.</a><br>
-                <a style="margin-left: 22px;">recharged.</a><br><br>
-                <a style="margin-left: 10px;">- Damage: The fifth one is the plant's damage. It's the amount of damage the plant does.</a><br>
-                <a style="margin-left: 22px;">If the plant doesn't do damage, it will display "No" on the seed packet.</a><br><br>
-                <a style="margin-left: 10px;">- Special: The sixth one is the plant's special ability. It's something the plant does that other plants cannot do.</a><br>
-                <a style="margin-left: 22px;">If the plant doesn't have a special ability, it will display "No" on the seed packet.</a><br><br>
-                <a style="margin-left: 10px;">- Sun: The plant's sun cost is the last piece of information to be shown. It appears on the left side of the the screen,</a><br>
-                <a style="margin-left: 22px;">next to the plant's name and image.</a><br><br>
-            </div>
-            <br><br><br>
-            <div class="lirvo" style="font-family: 'PvZFont2'; font-size: 20px; width: 1200px;">
-                <br>
-                DISCLAIMER: The images on the seed packets are for illustrative purposes only and do not necessarily reflect the plant's actual behavior or abilities.<br><br>
-                All images and information are sourced from the PvZ Wikipedia.<br><br>
-                The original game was developed by PopCap Games.
-                <br><br>
-            </div>
-            <br><br><a id="a"><br></a>
-            <div id="botaodiv" class="lirvo" style="width: 150px; text-align: center; z-index: 9999; position: relative; display: none; font-family: PvZFont2; font-size: 25px; border: 0px; border-radius: 0px; background-color: #793300; color: #cb8b2a;">
-                <a id="botao" style="cursor: pointer"onclick="tutorial()">Real tutorial</a>
-            </div>
-            <br><br>
-        </BODY>
+    body {
+        background-repeat: repeat;
+        background-image: url("https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FAlmanac_GroundDay2.png?alt=media&token=276be062-4335-4006-beee-5ac6a85024b9")
+    }
+
+    .cartinha {
+        top: 15%;
+        display: block;
+        size: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .fundo {
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: none;
+    }
+
+    .lirvo {
+        z-index: 2;
+        text-align: center;
+        position: relative;
+        background-color: #693011;
+        border: 5px;
+        border-radius: 25px;
+        border-color: #a7562b;
+        border-style: solid;
+        box-shadow: 100px;
+        color: #bd7d26;
+        font-size: 15px;
+        margin: auto;
+        display: none
+    }
+</style>
+<script>
+    var numero = 0
+
+    document.addEventListener('DOMContentLoaded', function () {
+        mudancas()
+    })
+
+    function mudancas() {
+        if (isMobile()) {
+            document.getElementsByClassName("lirvo")[0].style.marginLeft = "350px"
+            document.getElementsByClassName("lirvo")[1].style.marginLeft = "100px"
+            document.getElementsByClassName("lirvo")[2].style.marginLeft = "125px"
+        }
+    }
+
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
+    }
+
+    function tutorial() {
+        if (numero == 0) {
+            document.getElementById("cartinha").style.display = "none"
+            document.getElementById("fundinho").style.display = "block"
+            document.getElementsByClassName("lirvo")[0].style.display = "block"
+            document.getElementsByClassName("lirvo")[1].style.display = "block"
+            document.getElementsByClassName("lirvo")[2].style.display = "block"
+            document.getElementsByClassName("lirvo")[3].style.display = "block"
+            document.getElementById("a").style.display = "none"
+            document.getElementById("botao").innerText = "Back"
+            numero++
+        } else {
+            document.getElementById("cartinha").style.display = "block"
+            document.getElementById("fundinho").style.display = "none"
+            document.getElementsByClassName("lirvo")[0].style.display = "none"
+            document.getElementsByClassName("lirvo")[1].style.display = "none"
+            document.getElementsByClassName("lirvo")[2].style.display = "none"
+            document.getElementsByClassName("lirvo")[3].style.display = "none"
+            document.getElementById("a").style.display = "block"
+            document.getElementById("botao").innerText = "Real tutorial"
+            numero--
+        }
+    }
+    function carregar() {
+        setTimeout(function () {
+            document.getElementById("botaodiv").style.display = "block"
+        }, 2500)
+    }
+</script>
+
+<BODY onload="carregar()">
+    <br><br>
+    <img id="cartinha" class="cartinha"
+        src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FFake_tutorial.png?alt=media&token=ca34ad08-5c78-4c31-907d-d3c0533c5b45">
+    <img id="fundinho" class="fundo"
+        src="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTutorial%2FBackground.png?alt=media&token=675197b6-6aa0-4a8b-8fd2-66a0e54c9ffe">
+    <div class="lirvo" style="font-family: 'PvZFont'; width: 500px">
+        <br>
+        Real tutorial
+        <br><br>
+    </div>
+    <br>
+    <div class="lirvo" style="font-family: 'PvZFont2'; font-size: 20px; width: 1000px;">
+        <br>
+        The goal of the game is to guess today's plant!<br>
+        Each day, a new plant is selected for you to guess. If you guess correctly, your win-streak will grow.
+        However,<br>
+        if you lose a game, your win-streak will reset.<br>
+        Only the 49 plants that are available in regular gameplay are included.<br>
+        Explode-o-nut, Giant Wall-nut, Sprout, and Reverse Repeater are excluded from the selection.<br>
+        You have 6 guesses per day. If you spend all your guesses, you lose.<br><br>
+        What does each seed packet mean?
+        <br><br>
+    </div>
+    <br>
+    <div class="lirvo" style="font-family: 'PvZFont2'; font-size: 20px; width: 950px; text-align: left">
+        <br>
+        <a style="margin-left: 10px;">- Plant: The first one is the plant you chose. It displays its name and
+            image.</a><br><br>
+        <a style="margin-left: 10px;">- World: The second one is the world of the plant. It's the area where you obtain
+            the plant.</a><br><br>
+        <a style="margin-left: 10px;">- Recharge: The third one is the plant's recharge time. It's the amount of time it
+            takes for the plant to be fully</a><br>
+        <a style="margin-left: 22px;">If the plant doesn't do damage, it will display "No" on the seed
+            packet.</a><br><br>
+        <a style="margin-left: 10px;">- The fourth one is the plant's attack range. It's the area where the plant can
+            attack or perform actions.</a><br>
+        <a style="margin-left: 22px;">recharged.</a><br><br>
+        <a style="margin-left: 10px;">- Damage: The fifth one is the plant's damage. It's the amount of damage the plant
+            does.</a><br>
+        <a style="margin-left: 22px;">If the plant doesn't do damage, it will display "No" on the seed
+            packet.</a><br><br>
+        <a style="margin-left: 10px;">- Special: The sixth one is the plant's special ability. It's something the plant
+            does that other plants cannot do.</a><br>
+        <a style="margin-left: 22px;">If the plant doesn't have a special ability, it will display "No" on the seed
+            packet.</a><br><br>
+        <a style="margin-left: 10px;">- Sun: The plant's sun cost is the last piece of information to be shown. It
+            appears on the left side of the the screen,</a><br>
+        <a style="margin-left: 22px;">next to the plant's name and image.</a><br><br>
+    </div>
+    <br><br><br>
+    <div class="lirvo" style="font-family: 'PvZFont2'; font-size: 20px; width: 1200px;">
+        <br>
+        DISCLAIMER: The images on the seed packets are for illustrative purposes only and do not necessarily reflect the
+        plant's actual behavior or abilities.<br><br>
+        All images and information are sourced from the PvZ Wikipedia.<br><br>
+        The original game was developed by PopCap Games.
+        <br><br>
+    </div>
+    <br><br><a id="a"><br></a>
+    <div id="botaodiv" class="lirvo"
+        style="width: 150px; text-align: center; z-index: 9999; position: relative; display: none; font-family: PvZFont2; font-size: 25px; border: 0px; border-radius: 0px; background-color: #793300; color: #cb8b2a;">
+        <a id="botao" style="cursor: pointer" onclick="tutorial()">Real tutorial</a>
+    </div>
+    <br><br>
+</BODY>
+
 </HTML>

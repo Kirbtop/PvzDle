@@ -1,0 +1,606 @@
+#botaodomenu {
+  /* Default styles */
+  width: 200px;
+  height: auto;
+}
+
+ .icon {
+            z-index: 10000;
+            margin-top: -190px;
+            position: relative
+        }
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  #botaodomenu {
+    width: 180px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #botaodomenu {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #botaodomenu {
+    width: 120px;
+    height: auto;
+    font-size: 10px;
+  }
+}
+
+.nao {
+  display: none !important;
+}
+
+@font-face {
+  font-family: "PvZFont";
+  src: url("Brianne_s_hand.ttf");
+}
+
+.teste {
+  font-family: "PvZFont";
+}
+
+@font-face {
+  font-family: "PvZFont2";
+  src: url("SERIO___.TTF");
+}
+
+.teste2 {
+  font-family: "PvZFont2";
+}
+
+.fundo {
+  top: 0;
+  left: 0;
+  z-index: -10;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+
+.fundo2 {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 26vh;
+  position: absolute;
+}
+
+#pause {
+  top: 15%;
+  left: 36.5%;
+  position: fixed;
+  z-index: 0;
+  display: none;
+  margin: auto;
+}
+
+.menu {
+  z-index: 0;
+  position: static;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -25px;
+}
+
+.right {
+  display: flex;
+  margin-left: auto;
+  margin-right: 1.5rem;
+  top: 0;
+}
+
+.divdasfields {
+  /* Remova o position: fixed e ajuste para centralizar/descer normalmente */
+  position: relative;
+  margin-top: 0;
+  left: 0;
+  width: 340px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 2;
+  background: none;
+  padding: 0;
+}
+
+.modal-content {
+  background: url("https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2Fplacar2.png?alt=media&token=bda45814-5e71-4dbe-9168-795799059a35")
+    no-repeat;
+  height: auto;
+  padding: 20px;
+  border-radius: 8px;
+
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  color: black;
+
+  text-align: center;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#plaquinha {
+  bottom: 0;
+  position: fixed;
+  cursor: pointer;
+}
+
+#musiquinha {
+  font-family: PvZFont;
+  margin-left: -250px;
+  margin-top: 190px;
+  z-index: 10000;
+  position: fixed;
+  font-size: 30px;
+  color: #626284;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+#coisadesom {
+  cursor: pointer;
+  margin-left: 90px;
+  margin-top: -75px;
+}
+
+#naoseinomeparabotarnestadiv a {
+  font-size: 1.5vw;
+}
+
+#logo {
+  width: 100%;
+  max-width: 50px;
+}
+
+#how {
+  margin-left: -254px;
+  margin-top: 250px;
+  cursor: pointer;
+  position: fixed;
+  height: 65px;
+  z-index: 100;
+}
+
+#credits {
+  margin-left: -254px;
+  margin-top: 300px;
+  cursor: pointer;
+  position: fixed;
+  height: 65px;
+  z-index: 100;
+}
+
+#options {
+  margin-left: -285px;
+  margin-top: 390px;
+  cursor: pointer;
+  position: fixed;
+  height: 85px;
+  z-index: 100;
+}
+
+#escolha {
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 20px;
+}
+
+.divdasfields #trofeus {
+  margin-left: 45px;
+  color: #bd7d26;
+}
+
+.divdasfields #streak {
+  color: #bd7d26;
+  font-size: 22px;
+}
+
+.divdasfields fieldset {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.33%;
+}
+
+.divdasfields fieldset img {
+  position: static;
+  margin-left: 18px;
+  margin-right: 18px;
+  height: 32px;
+  width: auto;
+}
+
+.divdasfields fieldset p {
+  margin: 0;
+  font-size: 1.4em;
+  font-family: "PvZFont", Arial, sans-serif;
+  color: #bd7d26;
+  text-align: left;
+  width: auto;
+  /* Alinha verticalmente com o ícone */
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+#trofeuVerde {
+  margin-top: 4vh;
+  height: 45px;
+  margin-left: -25%;
+}
+
+#trofeuAmarelo {
+  margin-top: 1vh;
+  height: 35px;
+  margin-left: -25%;
+}
+
+#diamante {
+  margin-top: 1.5vh;
+  margin-left: -25%;
+  height: 25px;
+}
+
+.margin-left-30 {
+  margin-left: 2%;
+}
+
+.margin-left-10 {
+  margin-left: 10%;
+}
+
+#streakPessoa-p {
+  margin-top: 40%;
+  font-family: PvZFont;
+
+  display: inline-block;
+  /* Prevents line breaks */
+  text-align: left;
+  /* Ensures proper alignment */
+  white-space: nowrap;
+  /* Prevents text wrapping */
+}
+
+#streakAtual-p {
+  text-align: left;
+
+  width: auto;
+
+  font-family: PvZFont;
+}
+
+#vitoriasPessoa-p {
+  text-align: left;
+
+  width: auto;
+
+  font-family: PvZFont;
+}
+
+#div {
+  display: none;
+  position: absolute;
+  margin-left: 38.5%;
+  margin-top: 1%;
+  z-index: 9999;
+  font-family: PvZFont;
+  font-size: 20px;
+}
+
+#vitoria {
+  text-align: center;
+  margin-left: 11px;
+}
+
+#naoseiqualnomedar {
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  width: 535px;
+}
+
+.yayay {
+  position: relative;
+  text-align: center;
+}
+
+.modal {
+  z-index: 9999;
+  overflow: hidden;
+
+  font-family: "PvZFont";
+  pointer-events: none;
+}
+
+.compartilharmensagem {
+  margin-top: -10x;
+}
+
+#separamento {
+  display: block;
+  font-size: large;
+  height: 190px;
+
+  align-items: center;
+  justify-content: center;
+}
+
+#separamento2 {
+  font-size: 45px;
+  bottom: 0;
+}
+
+#separamento2 a {
+  font-size: small;
+}
+
+#separamento2 #timer {
+  margin-top: -20%;
+}
+
+#gugugu {
+  height: 39px;
+  width: 166.5px;
+  cursor: pointer;
+  margin-left: 25%;
+  margin-right: 75%;
+  bottom: 0;
+}
+
+.mensagemlalala {
+  opacity: 0;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .fundo2 {
+    height: 20vh;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 350px;
+    height: auto;
+    padding: 15px;
+  }
+
+  #musiquinha {
+    font-size: 24px;
+    margin-left: -200px;
+    margin-top: 150px;
+  }
+
+  #how,
+  #credits,
+  #options {
+    margin-left: -200px;
+    height: 50px;
+  }
+
+  #botaodomenu {
+    width: 180px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .divdasfields {
+    width: 200px;
+    height: 180px;
+    gap: 10px;
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  #musiquinha {
+    font-size: 20px;
+    margin-left: -150px;
+    margin-top: 120px;
+  }
+
+  #how,
+  #credits,
+  #options {
+    margin-left: -150px;
+    height: 40px;
+  }
+
+  #gugugu {
+    width: 140px;
+    margin-left: 20%;
+    margin-right: 80%;
+  }
+
+  #botaodomenu {
+    width: 150px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .divdasfields {
+    width: 150px;
+    height: 150px;
+    gap: 5px;
+  }
+
+  .modal-content {
+    width: 100%;
+    max-width: 250px;
+    padding: 5px;
+  }
+
+  #musiquinha {
+    font-size: 16px;
+    margin-left: -100px;
+    margin-top: 100px;
+  }
+
+  #how,
+  #credits,
+  #options {
+    margin-left: -100px;
+    height: 30px;
+  }
+
+  #gugugu {
+    width: 120px;
+    margin-left: 15%;
+    margin-right: 85%;
+  }
+
+  #botaodomenu {
+    width: 120px;
+    height: auto;
+  }
+}
+
+#trofeuimagemuau {
+  bottom: 0;
+  right: 1vw;
+  position: fixed;
+}
+
+.plaquinhadosFields {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  height: 210px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.divdasfields {
+  position: relative;
+  margin-top: 0; /* desce as fields sem fixar no topo */
+  left: 0;
+  width: 340px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  z-index: 2;
+  background: none;
+  padding: 0;
+}
+
+.plaquinhadosFields {
+  position: flex;
+  left: 50%;
+  top: 50%;
+  width: 340px;
+  height: 210px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.stats-line {
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 40px; /* altura menor por linha */
+  background: transparent;
+  border: none;
+  padding-top: 100vh;
+  /* desce cada field individualmente */
+}
+
+.stats-icon {
+  height: 32px; /* tamanho equilibrado */
+  width: auto;
+  margin-right: 12px;
+  margin-left: 0px;
+}
+
+.stats-line:first-of-type .stats-icon {
+  height: 38px; /* um pouco maior só para o troféu verde */
+  width: auto;
+  margin-right: 12px;
+  margin-left: 0px;
+}
+
+.stats-label {
+  font-family: "PvZFont", Arial, sans-serif;
+  font-size: 1.22em; /* tamanho equilibrado */
+  color: #bd7d26;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.stats-value {
+  color: #bd7d26;
+  margin-left: 6px;
+  font-size: 1em;
+  font-family: "PvZFont", Arial, sans-serif;
+  text-decoration: none;
+  line-height: 1;
+}
+
+#beststreak-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+}

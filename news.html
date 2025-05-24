@@ -1,35 +1,39 @@
 <!DOCTYPE html>
 <HTML>
-        <HEAD>
-            <title>PvzDle - NEW UPDATE</title>
-            <link rel="icon" type="images/png" href="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00"/>
-            <meta charset="UTF-8">
-        </HEAD>
-        <style>
-        .fundo {
-            top: 0;
-            left: 0;
-            z-index: -2;
-            width: 100%;
-            height: 100%;
-            position: fixed;
-        }
-        </style>
-        <script>
-            function isMobile() {
-                const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-                return regex.test(navigator.userAgent);
-            }
 
-            function celolar() {
-            if (isMobile()) {
-                document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FNEWSDNV.jpg?alt=media&token=e9a7d969-6c52-45bd-9625-112c256fa8e8"
-            } else {
-                document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FNEWS.png?alt=media&token=8923fd99-9ed5-44f0-b26b-c1b566b29bd0"
-            }
-            }
-        </script>
-        <BODY onload="celolar()">
-                <img id="fundinho" class="fundo" src="">
-        </BODY>
+<HEAD>
+    <title>PvzDle - NEW UPDATE</title>
+    <link rel="icon" type="images/png"
+        href="https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FLogo.png?alt=media&token=95da9a84-c05e-42ee-a34b-19b6c1133f00" />
+    <meta charset="UTF-8">
+</HEAD>
+<style>
+    .fundo {
+        top: 0;
+        left: 0;
+        z-index: -2;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+</style>
+<script>
+    function isMobile() {
+        const regex = /Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+        return regex.test(navigator.userAgent);
+    }
+
+    function celolar() {
+        if (isMobile()) {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FNEWSDNV.jpg?alt=media&token=e9a7d969-6c52-45bd-9625-112c256fa8e8"
+        } else {
+            document.getElementById("fundinho").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FOther%2FNEWS.png?alt=media&token=8923fd99-9ed5-44f0-b26b-c1b566b29bd0"
+        }
+    }
+</script>
+
+<BODY onload="celolar()">
+    <img id="fundinho" class="fundo" src="">
+</BODY>
+
 </HTML>

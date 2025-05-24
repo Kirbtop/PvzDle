@@ -319,32 +319,32 @@ var talaounaota = 1
                 document.getElementById("tentativas").innerText = "!!!"
                 setTimeout(function () { 
                     window.location.reload()
-                }, 500)
+                }, 2)
             }
-        }, 500);
+        }, 2);
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);
             lalalala++
-        }, 1000);
+        }, 2);
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);
             lalalala++
-        }, 1500);
+        }, 2);
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);
             lalalala++
-        }, 2000);
+        }, 2);
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);
             lalalala++
-        }, 2500);
+        }, 2);
         setTimeout(function () { 
             document.getElementById("pacote"+lalalala).classList.add("animation"+lalalala);
             lalalala++
-        }, 3000);
+        }, 2);
         setTimeout(function () { 
             document.getElementById("sois"+solsolsol).classList.add("animation"+solsolsol);
-        }, 3500);
+        }, 2);
         setTimeout(function () { 
             document.getElementById("escolha").disabled = false;
             document.getElementById("botaodomenu").style.cursor = "pointer"
@@ -359,5 +359,5 @@ var talaounaota = 1
             document.getElementById("solquantidade4").style.opacity = "1";
             document.getElementById("solquantidade5").style.opacity = "1";
             document.getElementById("solquantidade6").style.opacity = "1";
-        }, 4000);
+        }, 2);
     }

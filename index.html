@@ -253,10 +253,7 @@
     }
 
     var PlantaDoDia = ((dia + mes) * semana) - 2
-
-    if (PlantaDoDia == 91) {
-            PlantaDoDia = 31
-        }
+            
     if (PlantaDoDia == 198) {
             PlantaDoDia = 22
         }
@@ -266,8 +263,8 @@
         if (PlantaDoDia < 0) {
             PlantaDoDia = PlantaDoDia * (-1)
         }
-        if (PlantaDoDia == 57) {
-            PlantaDoDia = 47
+        if (PlantaDoDia == 91) {
+            PlantaDoDia = 31
         }
     }
 

@@ -161,7 +161,7 @@ function trofeeeu() {
   if ((vitoriass == 49) && (premio == 0)) {
       document.cookie = `Premio=1; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
       const audio = document.getElementById('audioPlayer');
-      audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FTrofeu.m4a?alt=media&token=9a0c8a69-d620-4b1d-9b86-2e3bf11e0c52"
+      audio.src = "Sound/Jingle/Trofeu.m4a"
       setTimeout(function () { 
           document.getElementById("mensagem").innerText = "Woah! You got the Silver Sunflower Trophy for getting 50 victories! Congratulations!!"
       }, 500)
@@ -169,7 +169,7 @@ function trofeeeu() {
   } else if ((vitoriass == 99) && (premio == 1)) {
       document.cookie = `Premio=2; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
       const audio = document.getElementById('audioPlayer');
-      audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FTrofeu.m4a?alt=media&token=9a0c8a69-d620-4b1d-9b86-2e3bf11e0c52"
+      audio.src = "Sound/Jingle/Trofeu.m4a"
       setTimeout(function () { 
         document.getElementById("mensagem").innerText = "Wooow! You got the Gold Sunflower Trophy for getting 100 victories! Well done!!"
       }, 500)
@@ -177,7 +177,7 @@ function trofeeeu() {
   } else if ((vitoriass == 364) && (premio == 2)) {
       document.cookie = `Premio=3; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
       const audio = document.getElementById('audioPlayer');
-      audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FTrofeu.m4a?alt=media&token=9a0c8a69-d620-4b1d-9b86-2e3bf11e0c52"
+      audio.src = "Sound/Jingle/Trofeu.m4a"
       setTimeout(function () { 
         document.getElementById("mensagem").innerText = "Oh my! You got the *DIAMOND SUNFLOWER TROPHY* for getting 365 victories! I've never think that someone could do that! Congratulations and well done!!!"
       }, 500)

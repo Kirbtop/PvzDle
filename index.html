@@ -160,7 +160,7 @@
         document.getElementById("escolha").value = ""
         var tocador = document.createElement("audio")
         tocador.id = "audioPlayer"
-        tocador.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FGrasswalk%20(In-Game).webm?alt=media&token=cdfd67b8-c14e-423b-9ef8-d8585a851ceb"
+        tocador.src = "Sound/Music/Grasswalk-_In-Game_.mp3"
         tocador.controls = true
         tocador.style = "display: none"
         document.getElementById("naoseinomeparabotarnestadiv").appendChild(tocador);
@@ -298,7 +298,7 @@
             }
             if (jaganhou == 0) {
             const audio = document.getElementById('audioPlayer');
-                audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FVictory.webm?alt=media&token=68a664fe-c09c-42ac-926e-e93beb6c62a5"
+                audio.src = "Sound/Jingle/Victory.webm"
                 trofeeeu()
                 audio.play();
             }
@@ -353,7 +353,7 @@
             }
             if (jaganhou == 0) {
                 const audio = document.getElementById('audioPlayer');
-                audio.src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2Flosemusic.ogg?alt=media&token=1867864d-ba33-4e32-9fbf-498e88e3fb73"
+                audio.src = "Sound/Jingle/losemusic.ogg"
                 audio.play();
             }
             document.getElementById("mensagem").innerText = "You lose! The today's Plant was: "+NomeDoDia.charAt(0).toUpperCase() + NomeDoDia.slice(1) +"!"
@@ -432,7 +432,7 @@
         } else {
             document.getElementById("fundinho").src = "Image/Background/Desktop/Frontyard.webp"
         }
-        document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FGrasswalk%20(In-Game).webm?alt=media&token=cdfd67b8-c14e-423b-9ef8-d8585a851ceb"
+        document.getElementById("audioPlayer").src = "Sound/Music/Grasswalk-_In-Game_.mp3"
         gravarfundo(1)
         tocarnovamente()
     }
@@ -443,7 +443,7 @@
         } else {
             document.getElementById("fundinho").src = "Image/Background/Desktop/Nightfrontyard.webp"
         }
-        document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FMoongrains%20(In-Game).webm?alt=media&token=c4631c6c-9d72-4668-957e-b870c9927e28"
+        document.getElementById("audioPlayer").src = "Sound/Music/Moongrains-_In-Game_.wav"
         gravarfundo(2)
         tocarnovamente()
     }
@@ -454,7 +454,7 @@
         } else {
             document.getElementById("fundinho").src = "Image/Background/Desktop/Background3.webp"
         }
-        document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FWatery%20Graves%20(In-Game).webm?alt=media&token=5322e7b7-565f-4fdf-bc90-486966b4df73"
+        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1-Image_Music_Watery-Graves-_In-Game_.wav"
         gravarfundo(3)
         tocarnovamente()
     }
@@ -465,7 +465,7 @@
         } else {
             document.getElementById("fundinho").src = "Image/Background/Desktop/Background4.webp"
         }
-        document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FRigor%20Mormist%20(In-Game).webm?alt=media&token=40fdd9b8-7e3e-453c-98a4-1d2c53440fc3"
+        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1-Image_Music_Rigor-Mormist-_In-Game_.wav"
         gravarfundo(4)
         tocarnovamente()
     }
@@ -476,7 +476,7 @@
         } else {
             document.getElementById("fundinho").src = "Image/Background/Desktop/Roof_(New).webp"
         }
-        document.getElementById("audioPlayer").src = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FMusic%2FGraze%20the%20Roof%20(In-Game).webm?alt=media&token=7cde5dd1-f9d7-42d3-9070-f0dbb450da1f"
+        document.getElementById("audioPlayer").src = "Sound/Music/Graze-the-Roof-_In-Game_.mp3"
         gravarfundo(5)
         tocarnovamente()
     }
@@ -645,7 +645,7 @@ function descerquadrado() {
             </div>
             <img id="fundo2" class="fundo2" src="Image/Windows/partedecima.png">
             <div id="naoseinomeparabotarnestadiv" style="font-family: PvZFont;">
-            <a style="margin-left: 30px">Images</a> and info. from the <a href="https://plantsvszombies.wiki.gg/wiki/Plants_vs._Zombies" target="_blank">Game's Wikipedia</a>. Fixed by @Exter_15 
+            <a style="margin-left: 30px">Images</a> and info. from the <a href="https://plantsvszombies.wiki.gg/wiki/Plants_vs._Zombies" target="_blank">Game's Wikipedia</a>. Fixed by @Exter_15
             <img height="50px" class="center" style="width: 100%; max-width: 50px;" src="Image/Others/Logo.png">
             <img height="50px" class="right" id="botaodomenu" onclick="menupause()" src="Image/Button/menu_button.png">
             <div style="text-align: center;">
@@ -697,12 +697,12 @@ function descerquadrado() {
                     </div>
                     <br>
                     <div id="separamento2" style="font-size: 45px; height: 140px;">
-                        <a style="font-size: small;">Next plant in:</a>
+                        <a style="font-size: small;">next plant in:</a>
                         <p id="timer" style="margin-top: -30px;"></p>
                     </div>
                     <br><br>
                     <img id="gugugu" onclick="compartilharMensagem()" src="Image/Button/SHAREBUTOON.png" height="39px" width="166.5px" style="cursor: pointer; margin-left: 25%; margin-right: 75%;">
-                    <p id="mensagemcopiadaaviso" style="opacity: 0" class="mensagemlalala">Message copied to clipboard!</p>
+                    <p id="mensagemcopiadaaviso" style="opacity: 0" class="mensagemlalala">message copied to clipboard!</p>
                 </div>
             </div>
         </BODY>

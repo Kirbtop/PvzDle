@@ -134,11 +134,11 @@ function trofeeu() {
       document.cookie = `Premio=0; expires=Thu, 01 Jan 2030 12:00:00 UTC; path=/; Secure; SameSite=Lax;`
     }
     if (premio == 3) {
-      trofeu = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTrophy%2Fplantsvsmaple_bluesunflower.png?alt=media&token=675ed7b1-accd-49fe-8084-8235d761d11e"
+      trofeu = "Image/Trophy/plantsvsmaple_bluesunflower.png"
     } else if (premio == 2) {
-      trofeu = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTrophy%2FGold_Sunflower_Trophy.webp?alt=media&token=b62491fa-3fb7-4059-bb20-03e0b0f988f9"
+      trofeu = "Image/Trophy/Gold_Sunflower_Trophy.webp"
     } else if (premio == 1) {
-      trofeu = "https://firebasestorage.googleapis.com/v0/b/jogo-e8689.appspot.com/o/PvZ1%20Image%2FTrophy%2FSilversunflowertrophy.webp?alt=media&token=79c336c9-cb61-4fe5-87ad-efde5041108e"
+      trofeu = "Image/Trophy/Silversunflowertrophy.webp"
     }
     if (premio >= 1) {
       var trofeuu = document.createElement("img");

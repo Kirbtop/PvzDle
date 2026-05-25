@@ -356,7 +356,7 @@
                 audio.src = "Sound/Jingle/losemusic.ogg"
                 audio.play();
             }
-            document.getElementById("mensagem").innerText = "You lose! The today's Plant was: "+NomeDoDia.charAt(0).toUpperCase() + NomeDoDia.slice(1) +"!"
+            document.getElementById("mensagem").innerText = "You lose! Today's Plant was: "+NomeDoDia.charAt(0).toUpperCase() + NomeDoDia.slice(1) +"!"
             document.getElementById("some").innerText = ""
             document.getElementById("escolha").disabled = true
             document.getElementById("tentativas").style.display = "none"
@@ -585,7 +585,7 @@ var x = setInterval(function() {
 function compartilharMensagem() {
     var mensagemcopiada = "oi"
     if (vitoria == 1) {
-        const hoje = new Date(); const dataFormatada = String(hoje.getDate()).padStart(2,'0')+'/'+String(hoje.getMonth()+1).padStart(2,'0')+'/'+hoje.getFullYear(); mensagemcopiada = dataFormatada + "\nI won the Today's Pvzdle! Yay!!" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\nPlay Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
+        const hoje = new Date(); const dataFormatada = String(hoje.getDate()).padStart(2,'0')+'/'+String(hoje.getMonth()+1).padStart(2,'0')+'/'+hoje.getFullYear(); mensagemcopiada = dataFormatada + "\nI won Today's Pvzdle! Yay!!" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\nPlay Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
     } else {
         const hoje2 = new Date(); const dataFormatada2 = String(hoje2.getDate()).padStart(2,'0')+'/'+String(hoje2.getMonth()+1).padStart(2,'0')+'/'+hoje2.getFullYear(); mensagemcopiada = dataFormatada2 + "\nI lost 😕😕" + document.getElementById("compartilharmensagem6").innerText + "" + document.getElementById("compartilharmensagem5").innerText + "" + document.getElementById("compartilharmensagem4").innerText + "" + document.getElementById("compartilharmensagem3").innerText + "" + document.getElementById("compartilharmensagem2").innerText + "" + document.getElementById("compartilharmensagem1").innerText +"\nPlay Pvzdle Here:\nhttps://kirbtop.github.io/PvzDle/";
     }

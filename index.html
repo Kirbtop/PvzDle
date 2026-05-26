@@ -168,6 +168,20 @@
         document.getElementById("botaodomenu").setAttribute( "onClick", "" );
         mudancas()
         updatestreak()
+
+        // Inicia la música automáticamente en el primer clic del usuario
+        document.addEventListener('click', function iniciarMusica() {
+            const audio = document.getElementById('audioPlayer');
+            if (audio && audio.paused && som == 0) {
+                audio.play().then(function() {
+                    som = 1;
+                    document.getElementById("coisadesom").classList.add("animation");
+                }).catch(function() {
+                    // El navegador bloqueó el autoplay igualmente, no pasa nada
+                });
+            }
+            document.removeEventListener('click', iniciarMusica);
+        });
     });
 
     while (numero < totalplantas ) {

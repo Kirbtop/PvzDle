@@ -315,7 +315,14 @@
                 audio.src = "Sound/Jingle/Victory.webm"
                 trofeeeu()
                 audio.play();
+                document.getElementById("coisadesom").classList.remove("animation")
+                document.getElementById("coisadesom").onclick = ""
+                document.getElementById("coisadesom").style.cursor = ""
                 audio.addEventListener('ended', function reactivarMegafono() {
+                    const musicas = ["", "Sound/Music/Grasswalk-_In-Game_.mp3", "Sound/Music/Moongrains-_In-Game_.mp3", "Sound/Music/PvZ1-Image_Music_Watery-Graves-_In-Game_.mp3", "Sound/Music/PvZ1-Image_Music_Rigor-Mormist-_In-Game_.mp3", "Sound/Music/Graze-the-Roof-_In-Game_.mp3"];
+                    let fundoAtual = getStreak("Fundo");
+                    if (fundoAtual == "") fundoAtual = 1;
+                    audio.src = musicas[parseInt(fundoAtual)];
                     som = 0;
                     document.getElementById("coisadesom").onclick = function() { musiquinha(); };
                     document.getElementById("coisadesom").style.cursor = "pointer";
@@ -357,9 +364,6 @@
             document.getElementById("some").innerText = ""
             document.getElementById("tentativas").style.display = "none"
             document.getElementById("numerodetentativas").style.display = "none"
-            document.getElementById("coisadesom").classList.remove("animation")
-            document.getElementById("coisadesom").onclick = ""
-            document.getElementById("coisadesom").style.cursor = ""
             document.getElementById("compartilharmensagem"+eaivei).innerText = emoji
             winStreak()
             setTimeout(function () { 

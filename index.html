@@ -315,6 +315,12 @@
                 audio.src = "Sound/Jingle/Victory.webm"
                 trofeeeu()
                 audio.play();
+                audio.addEventListener('ended', function reactivarMegafono() {
+                    som = 0;
+                    document.getElementById("coisadesom").onclick = function() { musiquinha(); };
+                    document.getElementById("coisadesom").style.cursor = "pointer";
+                    audio.removeEventListener('ended', reactivarMegafono);
+                });
             }
             derrota = parseInt(derrota)
             derrota = derrota + 1

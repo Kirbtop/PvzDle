@@ -505,6 +505,28 @@
         tocarnovamente()
     }
 
+    function fundo6() {
+        if (isMobile()) {
+            document.getElementById("fundinho").src = "Image/Background/Phone/5.png"
+        } else {
+            document.getElementById("fundinho").src = "Image/Background/Desktop/background6boss.jpg"
+        }
+        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1 Image_Music_Plants vs Zombies Soundtrack. [Zomboss Stage].mp3"
+        gravarfundo(6)
+        tocarnovamente()
+    }
+
+    function fundo11() {
+        if (isMobile()) {
+            document.getElementById("fundinho").src = "Image/Background/Phone/11.png"
+        } else {
+            document.getElementById("fundinho").src = "Image/Background/Desktop/Nightvase.webp"
+        }
+        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1 Image_Music_Plants vs Zombies Soundtrack. [Puzzle].mp3"
+        gravarfundo(6)
+        tocarnovamente()
+    }
+
     function tocarnovamente() {
         if (som == 1) {
             document.getElementById("coisadesom").classList.remove("animation")

@@ -313,6 +313,7 @@
             }
             if (jaganhou == 0) {
             const audio = document.getElementById('audioPlayer');
+                audio.loop = false;
                 audio.src = "Sound/Jingle/Victory.webm"
                 trofeeeu()
                 audio.play();
@@ -323,6 +324,7 @@
 					const musicas = ["", "Sound/Music/1.mp3", "Sound/Music/2.mp3", "Sound/Music/3.mp3", "Sound/Music/4.mp3", "Sound/Music/5.mp3", "Sound/Music/6.mp3", "Sound/Music/7.mp3", "Sound/Music/8.mp3", "Sound/Music/9.mp3", "Sound/Music/10.mp3", "Sound/Music/11.mp3", "Sound/Music/12.mp3"];
                     let fundoAtual = getStreak("Fundo");
                     if (fundoAtual == "") fundoAtual = 1;
+                    audio.loop = true;
                     audio.src = musicas[parseInt(fundoAtual)];
                     som = 0;
                     document.getElementById("coisadesom").onclick = function() { musiquinha(); };
@@ -378,8 +380,17 @@
             }
             if (jaganhou == 0) {
                 const audio = document.getElementById('audioPlayer');
+                audio.loop = false;
                 audio.src = "Sound/Jingle/losemusic.ogg"
                 audio.play();
+                audio.addEventListener('ended', function restoreMusica() {
+                    const musicas = ["", "Sound/Music/1.mp3", "Sound/Music/2.mp3", "Sound/Music/3.mp3", "Sound/Music/4.mp3", "Sound/Music/5.mp3", "Sound/Music/6.mp3", "Sound/Music/7.mp3", "Sound/Music/8.mp3", "Sound/Music/9.mp3", "Sound/Music/10.mp3", "Sound/Music/11.mp3", "Sound/Music/12.mp3"];
+                    let fundoAtual = getStreak("Fundo");
+                    if (fundoAtual == "") fundoAtual = 1;
+                    audio.loop = true;
+                    audio.src = musicas[parseInt(fundoAtual)];
+                    audio.removeEventListener('ended', restoreMusica);
+                });
             }
             document.getElementById("mensagem").innerText = "You lose! Today's Plant was: "+NomeDoDia.charAt(0).toUpperCase() + NomeDoDia.slice(1) +"!"
             document.getElementById("some").innerText = ""

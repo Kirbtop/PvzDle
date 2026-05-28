@@ -160,7 +160,7 @@
         document.getElementById("escolha").value = ""
         var tocador = document.createElement("audio")
         tocador.id = "audioPlayer"
-        tocador.src = "Sound/Music/lawnbgm1.ogg"
+        tocador.src = "Sound/Music/1.mp3"
         tocador.controls = true
         tocador.style = "display: none"
         document.getElementById("naoseinomeparabotarnestadiv").appendChild(tocador);
@@ -319,7 +319,7 @@
                 document.getElementById("coisadesom").onclick = ""
                 document.getElementById("coisadesom").style.cursor = ""
                 audio.addEventListener('ended', function reactivarMegafono() {
-					const musicas = ["", "Sound/Music/lawnbgm1.ogg", "Sound/Music/lawnbgm2.ogg", "Sound/Music/lawnbgm3.ogg", "Sound/Music/lawnbgm4.ogg", "Sound/Music/lawnbgm5.ogg", "Sound/Music/lawnbgm6.ogg", "Sound/Music/lawnbgm7.ogg", "Sound/Music/lawnbgm8.ogg", "Sound/Music/lawnbgm9.ogg", "Sound/Music/lawnbgm10.ogg", "Sound/Music/lawnbgm11.ogg", "Sound/Music/lawnbgm12.ogg"];
+					const musicas = ["", "Sound/Music/1.mp3", "Sound/Music/2.mp3", "Sound/Music/3.mp3", "Sound/Music/4.mp3", "Sound/Music/5.mp3", "Sound/Music/6.mp3", "Sound/Music/7.mp3", "Sound/Music/8.mp3", "Sound/Music/9.mp3", "Sound/Music/10.mp3", "Sound/Music/11.mp3", "Sound/Music/12.mp3"];
                     let fundoAtual = getStreak("Fundo");
                     if (fundoAtual == "") fundoAtual = 1;
                     audio.src = musicas[parseInt(fundoAtual)];
@@ -453,84 +453,84 @@
     function fundo1() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/1.webp" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/1.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm1.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/1.mp3"
         gravarfundo(1); tocarnovamente()
     }
 
     function fundo2() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/2.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/2.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm2.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/2.mp3"
         gravarfundo(2); tocarnovamente()
     }
 
     function fundo3() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/3.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/3.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm3.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/3.mp3"
         gravarfundo(3); tocarnovamente()
     }
 
     function fundo4() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/4.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/4.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm4.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/4.mp3"
         gravarfundo(4); tocarnovamente()
     }
 
     function fundo5() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/5.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/5.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm5.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/5.mp3"
         gravarfundo(5); tocarnovamente()
     }
 
     function fundo6() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/6.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/6.png" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm6.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/6.mp3"
         gravarfundo(6); tocarnovamente()
     }
 
     function fundo7() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/7.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/7.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm7.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/7.mp3"
         gravarfundo(7); tocarnovamente()
     }
 
     function fundo8() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/8.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/8.jpg" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm8.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/8.mp3"
         gravarfundo(8); tocarnovamente()
     }
 
     function fundo9() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/9.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/9.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm9.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/9.mp3"
         gravarfundo(9); tocarnovamente()
     }
 
     function fundo10() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/1.webp" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/1.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm10.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/10.mp3"
         gravarfundo(10); tocarnovamente()
     }
 
     function fundo11() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/1.webp" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/1.webp" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm11.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/11.mp3"
         gravarfundo(11); tocarnovamente()
     }
 
     function fundo12() {
         if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/12.png" }
         else { document.getElementById("fundinho").src = "Image/Background/Desktop/12.jpg" }
-        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm12.ogg"
+        document.getElementById("audioPlayer").src = "Sound/Music/12.mp3"
         gravarfundo(12); tocarnovamente()
     }
 

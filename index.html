@@ -162,6 +162,7 @@
         tocador.id = "audioPlayer"
         tocador.src = "Sound/Music/1.mp3"
         tocador.controls = true
+        tocador.loop = true
         tocador.style = "display: none"
         document.getElementById("naoseinomeparabotarnestadiv").appendChild(tocador);
         document.getElementById('escolha').disabled = true
@@ -560,6 +561,7 @@
             if (quadrado == 0 && document.getElementById("myModal").style.display == "block") {
                 descerquadrado()
             }
+            if (typeof _renderIconos === 'function') _renderIconos();
             pause++
         } else {
             document.getElementById("pause").style.display = "none"

@@ -160,7 +160,7 @@
         document.getElementById("escolha").value = ""
         var tocador = document.createElement("audio")
         tocador.id = "audioPlayer"
-        tocador.src = "Sound/Music/Grasswalk-_In-Game_.mp3"
+        tocador.src = "Sound/Music/lawnbgm1.ogg"
         tocador.controls = true
         tocador.style = "display: none"
         document.getElementById("naoseinomeparabotarnestadiv").appendChild(tocador);
@@ -319,7 +319,7 @@
                 document.getElementById("coisadesom").onclick = ""
                 document.getElementById("coisadesom").style.cursor = ""
                 audio.addEventListener('ended', function reactivarMegafono() {
-                    const musicas = ["", "Sound/Music/Grasswalk-_In-Game_.mp3", "Sound/Music/Moongrains-_In-Game_.mp3", "Sound/Music/PvZ1-Image_Music_Watery-Graves-_In-Game_.mp3", "Sound/Music/PvZ1-Image_Music_Rigor-Mormist-_In-Game_.mp3", "Sound/Music/Graze-the-Roof-_In-Game_.mp3"];
+					const musicas = ["", "Sound/Music/lawnbgm1.ogg", "Sound/Music/lawnbgm2.ogg", "Sound/Music/lawnbgm3.ogg", "Sound/Music/lawnbgm4.ogg", "Sound/Music/lawnbgm5.ogg", "Sound/Music/lawnbgm6.ogg", "Sound/Music/lawnbgm7.ogg", "Sound/Music/lawnbgm8.ogg", "Sound/Music/lawnbgm9.ogg", "Sound/Music/lawnbgm10.ogg", "Sound/Music/lawnbgm11.ogg", "Sound/Music/lawnbgm12.ogg"];
                     let fundoAtual = getStreak("Fundo");
                     if (fundoAtual == "") fundoAtual = 1;
                     audio.src = musicas[parseInt(fundoAtual)];
@@ -451,80 +451,87 @@
     }
 
     function fundo1() {
-        if (isMobile()) {
-             document.getElementById("fundinho").src = "Image/Background/Phone/FrontyardMobile.webp"
-        } else {
-            document.getElementById("fundinho").src = "Image/Background/Desktop/Frontyard.webp"
-        }
-        document.getElementById("audioPlayer").src = "Sound/Music/Grasswalk-_In-Game_.mp3"
-        gravarfundo(1)
-        tocarnovamente()
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/1.webp" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/1.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm1.ogg"
+        gravarfundo(1); tocarnovamente()
     }
 
     function fundo2() {
-        if (isMobile()) {
-            document.getElementById("fundinho").src = "Image/Background/Phone/1.png"
-        } else {
-            document.getElementById("fundinho").src = "Image/Background/Desktop/Nightfrontyard.webp"
-        }
-        document.getElementById("audioPlayer").src = "Sound/Music/Moongrains-_In-Game_.mp3"
-        gravarfundo(2)
-        tocarnovamente()
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/2.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/2.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm2.ogg"
+        gravarfundo(2); tocarnovamente()
     }
 
     function fundo3() {
-        if (isMobile()) {
-            document.getElementById("fundinho").src = "Image/Background/Phone/2.png"
-        } else {
-            document.getElementById("fundinho").src = "Image/Background/Desktop/Background3.webp"
-        }
-        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1-Image_Music_Watery-Graves-_In-Game_.mp3"
-        gravarfundo(3)
-        tocarnovamente()
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/3.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/3.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm3.ogg"
+        gravarfundo(3); tocarnovamente()
     }
 
     function fundo4() {
-        if (isMobile()) {
-            document.getElementById("fundinho").src = "Image/Background/Phone/3.png"
-        } else {
-            document.getElementById("fundinho").src = "Image/Background/Desktop/Background4.webp"
-        }
-        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1-Image_Music_Rigor-Mormist-_In-Game_.mp3"
-        gravarfundo(4)
-        tocarnovamente()
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/4.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/4.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm4.ogg"
+        gravarfundo(4); tocarnovamente()
     }
 
     function fundo5() {
-        if (isMobile()) {
-            document.getElementById("fundinho").src = "Image/Background/Phone/4.png"
-        } else {
-            document.getElementById("fundinho").src = "Image/Background/Desktop/Roof_(New).webp"
-        }
-        document.getElementById("audioPlayer").src = "Sound/Music/Graze-the-Roof-_In-Game_.mp3"
-        gravarfundo(5)
-        tocarnovamente()
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/5.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/5.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm5.ogg"
+        gravarfundo(5); tocarnovamente()
     }
 
     function fundo6() {
-        if (isMobile()) {
-            document.getElementById("fundinho").src = "Image/Background/Phone/5.png"
-        } else {
-            document.getElementById("fundinho").src = "Image/Background/Desktop/background6boss.jpg"
-        }
-        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1 Image_Music_Plants vs Zombies Soundtrack. [Zomboss Stage].mp3"
-        gravarfundo(6)
-        tocarnovamente()
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/6.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/6.png" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm6.ogg"
+        gravarfundo(6); tocarnovamente()
+    }
+
+    function fundo7() {
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/7.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/7.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm7.ogg"
+        gravarfundo(7); tocarnovamente()
+    }
+
+    function fundo8() {
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/8.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/8.jpg" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm8.ogg"
+        gravarfundo(8); tocarnovamente()
+    }
+
+    function fundo9() {
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/9.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/9.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm9.ogg"
+        gravarfundo(9); tocarnovamente()
+    }
+
+    function fundo10() {
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/1.webp" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/1.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm10.ogg"
+        gravarfundo(10); tocarnovamente()
     }
 
     function fundo11() {
-        if (isMobile()) {
-            document.getElementById("fundinho").src = "Image/Background/Phone/11.png"
-        } else {
-            document.getElementById("fundinho").src = "Image/Background/Desktop/Nightvase.webp"
-        }
-        document.getElementById("audioPlayer").src = "Sound/Music/PvZ1 Image_Music_Plants vs Zombies Soundtrack. [Puzzle].mp3"
-        gravarfundo(6)
-        tocarnovamente()
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/1.webp" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/1.webp" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm11.ogg"
+        gravarfundo(11); tocarnovamente()
+    }
+
+    function fundo12() {
+        if (isMobile()) { document.getElementById("fundinho").src = "Image/Background/Phone/12.png" }
+        else { document.getElementById("fundinho").src = "Image/Background/Desktop/12.jpg" }
+        document.getElementById("audioPlayer").src = "Sound/Music/lawnbgm12.ogg"
+        gravarfundo(12); tocarnovamente()
     }
 
     function tocarnovamente() {
@@ -678,16 +685,59 @@ function descerquadrado() {
         <BODY onload="verfundo(); NAOVAIJOGARNAO()">
             <img id="fundinho" class="fundo" src="">
             <div id="pause" style="margin-left: auto; margin-right: auto">
-                <img class="icon" onclick="fundo1()" style="cursor: pointer; margin-left: 70px" height="50px" src="Image/Pause Icon/Sunny_Days.webp">
-                <img class="icon" onclick="fundo2()" style="cursor: pointer" height="50px" src="Image/Pause Icon/Seeing_stars.webp">
-                <img class="icon" onclick="fundo3()" style="cursor: pointer" height="50px" src="Image/Pause Icon/Don't_Pea_in_the_Pool2.webp">
-                <img class="icon" onclick="fundo4()" style="cursor: pointer" height="50px" src="Image/Pause Icon/Newblindfaith.webp">
-                <img class="icon" onclick="fundo5()" style="cursor: pointer" height="50px" src="Image/Pause Icon/New_grounded_icon.webp">
-                <!--
-                <img class="icon" onclick="fundo6()" style="cursor: pointer" height="50px" src="Image/Pause Icon/background6boss.jpg">
-                <img class="icon" onclick="fundo7()" style="cursor: pointer" height="50px" src="Image/Pause Icon/Background_Greenhouse.jpg">
-                <img class="icon" onclick="fundo11()" style="cursor: pointer" height="50px" src="Image/Pause Icon/Nightvase.webp">
-                -->
+                <img class="icon" onclick="paginaAnterior()" style="cursor:pointer; margin-left:90px;" height="50px" src="Image/Pause Icon/left.webp">
+                <span id="iconrow"></span>
+                <img class="icon" onclick="paginaSiguiente()" style="cursor:pointer;" height="50px" src="Image/Pause Icon/right.webp">
+                <script>
+                var _todosIconos = [
+                    {fn:"fundo1",   src:"Image/Pause Icon/1.webp"},
+                    {fn:"fundo2",   src:"Image/Pause Icon/2.webp"},
+                    {fn:"fundo3",   src:"Image/Pause Icon/3.webp"},
+
+                    {fn:"fundo4",   src:"Image/Pause Icon/4.webp"},
+                    {fn:"fundo5",   src:"Image/Pause Icon/5.webp"},
+                    {fn:"fundo6",   src:"Image/Pause Icon/6.webp"},
+
+                    {fn:"fundo7",   src:"Image/Pause Icon/7.webp"},
+                    {fn:"fundo8",   src:"Image/Pause Icon/8.webp"},
+                    {fn:"fundo9",   src:"Image/Pause Icon/9.webp"},
+
+                    {fn:"fundo10",  src:"Image/Pause Icon/10.webp"},
+                    {fn:"fundo11",  src:"Image/Pause Icon/11.webp"},
+                    {fn:"fundo12",  src:"Image/Pause Icon/12.webp"},
+                ];
+                var _paginaIcono = 0;
+                var _porPagina = 3;
+                var _totalPaginas = Math.ceil(_todosIconos.length / _porPagina);
+                function _renderIconos() {
+                    var row = document.getElementById("iconrow");
+                    if (!row) return;
+                    row.innerHTML = "";
+                    var start = _paginaIcono * _porPagina;
+                    var end = Math.min(start + _porPagina, _todosIconos.length);
+                    for (var i = start; i < end; i++) {
+                        (function(item) {
+                            var img = document.createElement("img");
+                            img.src = item.src;
+                            img.height = 50;
+                            img.width = 50;
+                            img.className = "icon";
+                            img.style.cursor = "pointer";
+                            img.style.marginLeft = "0px";
+                            img.onclick = function() { window[item.fn](); };
+                            row.appendChild(img);
+                        })(_todosIconos[i]);
+                    }
+                }
+                function paginaAnterior() {
+                    _paginaIcono = (_paginaIcono - 1 + _totalPaginas) % _totalPaginas;
+                    _renderIconos();
+                }
+                function paginaSiguiente() {
+                    _paginaIcono = (_paginaIcono + 1) % _totalPaginas;
+                    _renderIconos();
+                }
+                </script>
                 <a style="font-family: PvZFont; margin-left: -250px; margin-top: 190px; z-index: 10000; position: fixed; font-size: 30px; color: #626284;"> Music: <br><img id="coisadesom" onclick="musiquinha()" style="cursor: pointer; margin-left: 90px; margin-top: -75px" height="50" src="Image/Pause Icon/Phonograph.png"></a>
                 <img style="margin-left: -254px; margin-top: 250px; cursor: pointer; position: fixed; height: 65px; z-index: 10000" onclick="window.open('tutorial.HTML')" src="Image/Button/how_button.png">
                 <img style="margin-left: -254px; margin-top: 300px; cursor: pointer; position: fixed; height: 65px; z-index: 10000" onclick="window.open('credits.HTML')" src="Image/Button/credits_button.png">

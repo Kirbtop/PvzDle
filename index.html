@@ -274,14 +274,12 @@
             PlantaDoDia = 22
         }
 
-    while (PlantaDoDia > totalplantas - 1) {
-        PlantaDoDia = PlantaDoDia - ((mes * semana) + (dia + semana) + 1)
-        if (PlantaDoDia < 0) {
-            PlantaDoDia = PlantaDoDia * (-1)
-        }
-        if (PlantaDoDia == 73) {
-            PlantaDoDia = 20
-        }
+    PlantaDoDia = PlantaDoDia % totalplantas;
+    if (PlantaDoDia < 0) {
+        PlantaDoDia = PlantaDoDia * (-1);
+    }
+    if (PlantaDoDia == 73) {
+        PlantaDoDia = 20;
     }
 
     var SolDoDia, UpgradeDoDia, MundoDoDia, AreaDoDia, DanoDoDia, CarregamentoDoDia, specialDoDia, NomeDoDia;
